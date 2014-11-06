@@ -10,7 +10,7 @@ void ofApp::setup(){
     circles = (CircleScene*) sceneManager.add(new CircleScene());
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
     sceneManager.add(new ParticleScene());
-    sceneManager.add(new RiceScene());
+    rice = (RiceScene*)sceneManager.add(new RiceScene());
     sceneManager.gotoScene("Rice", true);
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
@@ -28,6 +28,10 @@ void ofApp::setup(){
     controlPanel.addSlider2D("POI1", "POI1", ofGetWidth()/2, ofGetHeight()/2, 0, ofGetWidth(), 0, ofGetHeight(), false);
     controlPanel.addSlider2D("POI2", "POI2", ofGetWidth()/2, ofGetHeight()/2, 0, ofGetWidth(), 0, ofGetHeight(), false);
     controlPanel.addSlider2D("POI3", "POI3", ofGetWidth()/2, ofGetHeight()/2, 0, ofGetWidth(), 0, ofGetHeight(), false);
+    
+    controlPanel.addPanel("Rice", 1);
+    controlPanel.setWhichPanel("Rice");
+    controlPanel.addSlider2D("Wind", "wind", 0, 0, -0.1, 0.1, -0.1, 0.1, false);
     
     controlPanel.setupEvents();
     controlPanel.enableEvents();
@@ -90,6 +94,8 @@ void ofApp::onGuiEvent(guiCallbackData & d){
         vector <string> poiNum = ofSplitString(d.getXmlName(), "I");
         POIs[ofFromString<int>(poiNum[1])] = ofVec3f(d.getFloat(0),d.getFloat(1));
         cout<< "set POI!"<<endl;
+    } else if(d.getXmlName() =="wind"){
+        rice->setWind (ofVec3f(d.getFloat(0),d.getFloat(1)));
     }
 }
 

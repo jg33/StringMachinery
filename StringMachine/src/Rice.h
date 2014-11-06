@@ -22,10 +22,10 @@ public:
     void draw();
     
     ofColor color;
-    ofVec3f wind;
+    //ofVec3f wind;
     
 private:
-    ofVec3f rotation;
+    ofVec3f rotation, rotationOffset;
     
 };
 

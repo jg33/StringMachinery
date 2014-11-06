@@ -22,12 +22,16 @@ public:
     void update();
     void draw();
     
+    void setWind(ofVec3f _wind);
+    
 private:
     
     ofxParticleManager pBoss;
     
     ofxColourTheory colorMaker;
     vector<ofColor> pallette;
+
+    ofVec3f wind;
     
 };
 

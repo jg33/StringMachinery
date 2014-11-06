@@ -10,25 +10,33 @@
 
 
 void Rice::setup(){
-    size = 5;
+    size = ofRandom(1,10);
+    pos = ofVec3f(ofRandom(500),ofRandom(500));
+    lifespan = ofRandom(2000,6000);
+    rotationOffset = ofVec3f(ofRandom(180),ofRandom(180),ofRandom(180) );
+    //wind = ofVec2f(0.001,0);
+
 }
 
 void Rice::customUpdate(){
-    wind = ofVec2f(0.1,0);
-    acc += ofVec2f(0,-1); //gravity
-    acc += wind;
     
-    rotation = ofVec3f(vel.x*ofGetElapsedTimef(),vel.y*ofGetElapsedTimef(),vel.z*ofGetElapsedTimef() );
+    
+    acc += ofVec2f(0,0.001); //gravity
+   // acc += wind;
+    
+    rotation = rotationOffset+ofVec3f(vel.x*ofGetElapsedTimef(),vel.y*ofGetElapsedTimef(),vel.z*ofGetElapsedTimef() );
     
 }
 
 void Rice::draw(){
-    ofBackground(0) ;
+    //ofBackground(0) ;
     ofPushMatrix();
     ofSetRectMode(OF_RECTMODE_CENTER);
+    ofTranslate(pos);
     ofRotateX(rotation.x);
     ofRotateY(rotation.y);
     ofRotateZ(rotation.z);
-    ofRect(pos, size, size/2);
+    ofRect(0,0,0, size, size/2);
     ofPopMatrix();
 }
+

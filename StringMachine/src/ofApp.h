@@ -11,6 +11,7 @@
 
 class CircleScene;
 class ConnectorScene;
+class RiceScene;
 
 class ofApp : public ofxApp{
 
@@ -39,6 +40,7 @@ private:
     ofxSceneManager sceneManager;
     CircleScene * circles;
     ConnectorScene * connections;
+    RiceScene * rice;
     
     map<int,float> micInputs;
     map<int,ofVec3f> dancers;

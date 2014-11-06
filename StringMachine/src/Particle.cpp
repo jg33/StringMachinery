@@ -12,7 +12,7 @@
 void Particle::update(){
     updateAge();
     
-    float sizeDragFactor = ofMap(size,0,maxSize,0.1,1);
+    float sizeDragFactor = ofMap(size,1,maxSize,0.1,1);
     
     vel+=acc;
     vel*= (1- (drag*sizeDragFactor));
@@ -23,7 +23,7 @@ void Particle::update(){
 
 void Particle::attractToward(ofVec3f v, float f){
     ofVec3f distToTarget = v-pos;
-    float distFactor = ofClamp(ofMap(distToTarget.length(),0,500,1,0),0,1 );
-    acc += distToTarget*0.1*f*distFactor;
+    float distFactor = ofClamp(ofMap(distToTarget.length(),1,500,1,0),0,1 );
+   // acc += distToTarget*0.1*f*distFactor;
     
 }
