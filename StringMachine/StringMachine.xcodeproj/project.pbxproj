@@ -144,6 +144,8 @@
 		886405AB19E46CBE00408336 /* simpleFileLister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864058E19E46CBE00408336 /* simpleFileLister.cpp */; };
 		886405AC19E46CBE00408336 /* simpleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864059019E46CBE00408336 /* simpleLogger.cpp */; };
 		886405B019E4781300408336 /* ParticleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886405AE19E4781300408336 /* ParticleScene.cpp */; };
+		888267FD1A0B30AC00C172FF /* FragmentScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888267FB1A0B30AC00C172FF /* FragmentScene.cpp */; };
+		888268001A0B322500C172FF /* Fragment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888267FE1A0B322500C172FF /* Fragment.cpp */; };
 		888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680EF19E6170200A9FB4B /* CircleScene.cpp */; };
 		888680F619E6175F00A9FB4B /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680F419E6175F00A9FB4B /* Circle.cpp */; };
 		88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A3AAA919E66B60001FD7AE /* Particle.cpp */; };
@@ -557,6 +559,10 @@
 		8864059119E46CBE00408336 /* simpleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleLogger.h; sourceTree = "<group>"; };
 		886405AE19E4781300408336 /* ParticleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleScene.cpp; sourceTree = "<group>"; };
 		886405AF19E4781300408336 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
+		888267FB1A0B30AC00C172FF /* FragmentScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FragmentScene.cpp; path = scenes/FragmentScene.cpp; sourceTree = "<group>"; };
+		888267FC1A0B30AC00C172FF /* FragmentScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FragmentScene.h; path = scenes/FragmentScene.h; sourceTree = "<group>"; };
+		888267FE1A0B322500C172FF /* Fragment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Fragment.cpp; path = particles/Fragment.cpp; sourceTree = "<group>"; };
+		888267FF1A0B322500C172FF /* Fragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fragment.h; path = particles/Fragment.h; sourceTree = "<group>"; };
 		888680EF19E6170200A9FB4B /* CircleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircleScene.cpp; path = scenes/CircleScene.cpp; sourceTree = "<group>"; };
 		888680F019E6170200A9FB4B /* CircleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleScene.h; path = scenes/CircleScene.h; sourceTree = "<group>"; };
 		888680F319E6171F00A9FB4B /* Scenes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scenes.h; path = scenes/Scenes.h; sourceTree = "<group>"; };
@@ -1276,6 +1282,8 @@
 				888680F519E6175F00A9FB4B /* Circle.h */,
 				88A8559F19ED9184005AF18C /* RiceScene.cpp */,
 				88A855A019ED9184005AF18C /* RiceScene.h */,
+				888267FB1A0B30AC00C172FF /* FragmentScene.cpp */,
+				888267FC1A0B30AC00C172FF /* FragmentScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1291,6 +1299,8 @@
 				88D76BA719E8A3AB00D870B0 /* Attractor.h */,
 				88A3AAA919E66B60001FD7AE /* Particle.cpp */,
 				88A3AAAA19E66B60001FD7AE /* Particle.h */,
+				888267FE1A0B322500C172FF /* Fragment.cpp */,
+				888267FF1A0B322500C172FF /* Fragment.h */,
 			);
 			name = particles;
 			sourceTree = "<group>";
@@ -1648,6 +1658,7 @@
 				8864050819E4672100408336 /* ofxUIFPS.cpp in Sources */,
 				8864051E19E4672100408336 /* ofxUISpacer.cpp in Sources */,
 				3BFC7CF50BEB0307821B90A6 /* lz4.c in Sources */,
+				888268001A0B322500C172FF /* Fragment.cpp in Sources */,
 				8864052119E4672100408336 /* ofxUITabBar.cpp in Sources */,
 				8864050019E4672100408336 /* ofxUIBaseDraws.cpp in Sources */,
 				88D76BA819E8A3AB00D870B0 /* Attractor.cpp in Sources */,
@@ -1709,6 +1720,7 @@
 				8864050219E4672100408336 /* ofxUIButton.cpp in Sources */,
 				88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */,
 				899BAF53175868463FE1B029 /* RecursiveDirectoryIteratorStategies.cpp in Sources */,
+				888267FD1A0B30AC00C172FF /* FragmentScene.cpp in Sources */,
 				8864059319E46CBE00408336 /* guiCallback.cpp in Sources */,
 				8864049119E4671B00408336 /* ofxRParticle.cpp in Sources */,
 				3C9A355A55D68A8E882FEF85 /* RegexPathFilter.cpp in Sources */,
