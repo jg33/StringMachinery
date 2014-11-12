@@ -11,10 +11,15 @@ void ofApp::setup(){
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
     sceneManager.add(new ParticleScene());
     rice = (RiceScene*)sceneManager.add(new RiceScene());
-    sceneManager.gotoScene("Rice", true);
+    fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphonServe));
+    lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphonServe));
+    venn = (VennScene*)sceneManager.add(new VennScene(&syphonServe));
+    
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
+    sceneManager.gotoScene("Fragments", true);
+
 
     
     ////CONTROL PANEL//////
@@ -31,7 +36,7 @@ void ofApp::setup(){
     
     controlPanel.addPanel("Rice", 1);
     controlPanel.setWhichPanel("Rice");
-    controlPanel.addSlider2D("Wind", "wind", 0, 0, -0.1, 0.1, -0.1, 0.1, false);
+    controlPanel.addSlider2D("Wind", "wind", 0, 0, -0.001, 0.001, -0.001, 0.001, false);
     
     controlPanel.setupEvents();
     controlPanel.enableEvents();
@@ -46,6 +51,9 @@ void ofApp::setup(){
         POIpower[i] = ofRandom(1);
     }
 
+    for(int i =0; i<NUM_MICS;i++){
+        micInputs.push_back(0);
+    }
 }
 
 //--------------------------------------------------------------
@@ -58,7 +66,7 @@ void ofApp::update(){
 
         if(address[1] == "mic"){
             micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
-            cout<< msg.getAddress() <<endl;
+            lineChase->setLineDisp(ofToInt(address[2]), msg.getArgAsFloat(0));
             
         } else if ( address[1] == "dancer"){
             dancers[ofToInt(address[2])] = ofVec3f(msg.getArgAsFloat(0),msg.getArgAsFloat(1),msg.getArgAsFloat(2));
@@ -75,15 +83,13 @@ void ofApp::update(){
     
     circles->setSizes(micInputs);
     //connections->setPoints(&POIs);
-    
-    
+    ofSetWindowTitle(sceneManager.getCurrentSceneName()+" @ "+ ofToString(ofGetFrameRate()));
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     popTransforms();
     
-    syphonServe.publishScreen();
     
     //drawControlPanel();
     //drawFramerate(10, 10);
@@ -111,8 +117,12 @@ void ofApp::keyPressed(int key){
             case ']':
             sceneManager.nextScene();
             break;
-            
+
     }
+    if(key == ' '){
+        fragments->fireRandom();
+    }
+
 }
 
 //--------------------------------------------------------------

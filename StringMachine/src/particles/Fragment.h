@@ -18,7 +18,7 @@ class Fragment{
     
 public:
     Fragment(){setup();};
-    
+    Fragment(ofPath _path){shape =_path;setup();};
     void setup();
     void update();
     void draw();
@@ -29,6 +29,9 @@ public:
 private:
     
     ofVec3f loc;
+    
+    ofPath shape;
+    vector<ofPolyline> outlines;
     
     float brightness;
     float decay;

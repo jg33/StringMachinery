@@ -12,14 +12,16 @@
 #include <stdio.h>
 #include "ofMain.h"
 #include "ofxAppUtils.h"
+#include "ofxSvg.h"
 #include "Fragment.h"
+#include "ofxSyphon.h"
 
-#define NUM_FRAGMENTS 50
 
 class FragmentScene : public ofxScene{
     
 public:
     FragmentScene():ofxScene("Fragments"){setSingleSetup(false);};
+    FragmentScene(ofxSyphonServer* _syphon):ofxScene("Fragments"){syphon = _syphon; setSingleSetup(false);};
     void setup();
     void update();
     void draw();
@@ -29,6 +31,8 @@ public:
     
 private:
     vector<Fragment> fragments;
+    ofxSVG image;
+    ofxSyphonServer * syphon;
     
 };
 

@@ -13,4 +13,8 @@
 #include "CircleScene.h"
 #include "ConnectorScene.h"
 #include "RiceScene.h"
+#include "FragmentScene.h"
+#include "LineChaseScene.h"
+#include "VennScene.h"
+
 #endif

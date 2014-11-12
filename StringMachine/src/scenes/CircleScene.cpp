@@ -35,7 +35,7 @@ void CircleScene::update(){
     
 }
 
-void CircleScene::setSizes(map<int,float> s){
+void CircleScene::setSizes(vector<float> s){
     for (int i=0; i<circles.size(); i++) {
         try {
             circles[i].setSize(s[i-1]*50);

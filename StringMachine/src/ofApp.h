@@ -9,9 +9,14 @@
 
 #include "Scenes.h"
 
+#define NUM_MICS 4
+
 class CircleScene;
 class ConnectorScene;
 class RiceScene;
+class FragmentScene;
+class LineChaseScene;
+class VennScene;
 
 class ofApp : public ofxApp{
 
@@ -41,8 +46,11 @@ private:
     CircleScene * circles;
     ConnectorScene * connections;
     RiceScene * rice;
+    FragmentScene * fragments;
+    LineChaseScene * lineChase;
+    VennScene * venn;
     
-    map<int,float> micInputs;
+    vector<float> micInputs;
     map<int,ofVec3f> dancers;
     map<int,ofVec3f> POIs;
     map<int,float> POIpower;

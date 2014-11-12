@@ -25,7 +25,7 @@ public:
     void update();
     void draw();
     
-    void setSizes(map<int,float>);
+    void setSizes(vector<float>);
     
     
 private:

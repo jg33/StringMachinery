@@ -10,24 +10,33 @@
 
 
 void FragmentScene::setup(){
-    for(int i=0;i<NUM_FRAGMENTS;i++){
-        fragments.push_back(Fragment());
+    image.load("wackTest.svg");
+    fragments.clear();
+    for(int i=0;i<image.getNumPath();i++){
+        fragments.push_back(Fragment(image.getPathAt(i)));
         
     }
+    
+    cout<<"setup frags! paths: "<<image.getNumPath()<<endl;
 }
 
 void FragmentScene::update(){
-    for(int i=0;i<NUM_FRAGMENTS;i++){
+    for(int i=0;i<fragments.size();i++){
         fragments[i].update();
         
     }
 }
 
 void FragmentScene::draw(){
-    for(int i=0;i<NUM_FRAGMENTS;i++){
+    ofBackground(0);
+    for(int i=0;i<fragments.size();i++){
         fragments[i].draw();
         
     }
+    
+    syphon->publishScreen();
+    //image.draw();
+   
 }
 
 void FragmentScene::fireRandom(){
