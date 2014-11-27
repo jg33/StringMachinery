@@ -18,5 +18,6 @@
 #include "VennScene.h"
 #include "NoteSendScene.h"
 #include "SingleStringScene.h"
+#include "WaveScene.h"
 
 #endif

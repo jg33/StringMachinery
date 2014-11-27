@@ -154,6 +154,7 @@
 		888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680EF19E6170200A9FB4B /* CircleScene.cpp */; };
 		888680F619E6175F00A9FB4B /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680F419E6175F00A9FB4B /* Circle.cpp */; };
 		88872D961A26D15E006D42DA /* SingleStringScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D941A26D15E006D42DA /* SingleStringScene.cpp */; };
+		88872D991A26E3D3006D42DA /* WaveScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D971A26E3D3006D42DA /* WaveScene.cpp */; };
 		8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8893BB321A266EE30012A28C /* NoteSendScene.cpp */; };
 		88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A3AAA919E66B60001FD7AE /* Particle.cpp */; };
 		88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559C19ED8FA0005AF18C /* Rice.cpp */; };
@@ -588,6 +589,8 @@
 		888680F519E6175F00A9FB4B /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		88872D941A26D15E006D42DA /* SingleStringScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleStringScene.cpp; path = scenes/SingleStringScene.cpp; sourceTree = "<group>"; };
 		88872D951A26D15E006D42DA /* SingleStringScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleStringScene.h; path = scenes/SingleStringScene.h; sourceTree = "<group>"; };
+		88872D971A26E3D3006D42DA /* WaveScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaveScene.cpp; path = scenes/WaveScene.cpp; sourceTree = "<group>"; };
+		88872D981A26E3D3006D42DA /* WaveScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveScene.h; path = scenes/WaveScene.h; sourceTree = "<group>"; };
 		8893BB321A266EE30012A28C /* NoteSendScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NoteSendScene.cpp; path = scenes/NoteSendScene.cpp; sourceTree = "<group>"; };
 		8893BB331A266EE30012A28C /* NoteSendScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteSendScene.h; path = scenes/NoteSendScene.h; sourceTree = "<group>"; };
 		88A3AAA919E66B60001FD7AE /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
@@ -1369,6 +1372,8 @@
 				888267FC1A0B30AC00C172FF /* FragmentScene.h */,
 				88E76B3A1A134F3F0090E1F6 /* VennScene.cpp */,
 				88E76B3B1A134F3F0090E1F6 /* VennScene.h */,
+				88872D971A26E3D3006D42DA /* WaveScene.cpp */,
+				88872D981A26E3D3006D42DA /* WaveScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1899,6 +1904,7 @@
 				8864048819E4671B00408336 /* ofxElectroStaticNeighborBehavior.cpp in Sources */,
 				11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */,
 				886405A019E46CBE00408336 /* guiTypePanel.cpp in Sources */,
+				88872D991A26E3D3006D42DA /* WaveScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,12 +16,13 @@ void ofApp::setup(){
     venn = (VennScene*)sceneManager.add(new VennScene(&syphonServe));
     noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphonServe));
     single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
+    waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
     
     
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
-    sceneManager.gotoScene("SingleString", true);
+    sceneManager.gotoScene("Waves", true);
 
 
     
