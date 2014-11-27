@@ -28,6 +28,12 @@ public:
     void update();
     void draw();
     
+    inline vector<ofVec3f> getPoints(){return currentPoints;};
+    inline ofVec2f getLoc(){return loc;};
+    inline void setLoc(ofVec2f v){loc=v;};
+    inline void setDisplace(float d){displacement = d;};
+    inline float getRadius(){return radius;};
+    
     
 private:
     vennSide side;
@@ -37,6 +43,9 @@ private:
     float radius = 150;
     float displacement = 100;
     
+    int circleResolution = 15;
+    
+    vector<ofVec3f> basePoints, currentPoints;
 
     
     ofPolyline line;
@@ -64,11 +73,15 @@ private:
     VennCircle left, right;
     ofPath overlapShape;
     
+    ofMesh testMesh;
+    
     void calcOverlap(VennCircle a, VennCircle b);
     
     float rotation;
     float rotationSpeed = 1;
     
+    vector<ofPoint> getConvexHull(vector<ofPoint> points);
+    ofPoint h1,h2,h3;
 };
 
 

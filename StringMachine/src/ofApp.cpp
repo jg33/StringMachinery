@@ -14,11 +14,14 @@ void ofApp::setup(){
     fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphonServe));
     lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphonServe));
     venn = (VennScene*)sceneManager.add(new VennScene(&syphonServe));
+    noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphonServe));
+    single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
+    
     
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
-    sceneManager.gotoScene("Fragments", true);
+    sceneManager.gotoScene("SingleString", true);
 
 
     
@@ -116,6 +119,9 @@ void ofApp::keyPressed(int key){
             break;
             case ']':
             sceneManager.nextScene();
+            break;
+            case 'm':
+            noteSend->addNote((int)ofRandom(127), (int)ofRandom(127));
             break;
 
     }

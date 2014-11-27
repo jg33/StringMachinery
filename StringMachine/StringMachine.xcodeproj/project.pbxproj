@@ -153,6 +153,8 @@
 		888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680E1A0C209400C172FF /* svgtiny_list.cpp */; };
 		888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680EF19E6170200A9FB4B /* CircleScene.cpp */; };
 		888680F619E6175F00A9FB4B /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680F419E6175F00A9FB4B /* Circle.cpp */; };
+		88872D961A26D15E006D42DA /* SingleStringScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D941A26D15E006D42DA /* SingleStringScene.cpp */; };
+		8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8893BB321A266EE30012A28C /* NoteSendScene.cpp */; };
 		88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A3AAA919E66B60001FD7AE /* Particle.cpp */; };
 		88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559C19ED8FA0005AF18C /* Rice.cpp */; };
 		88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559F19ED9184005AF18C /* RiceScene.cpp */; };
@@ -584,6 +586,10 @@
 		888680F319E6171F00A9FB4B /* Scenes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scenes.h; path = scenes/Scenes.h; sourceTree = "<group>"; };
 		888680F419E6175F00A9FB4B /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
 		888680F519E6175F00A9FB4B /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		88872D941A26D15E006D42DA /* SingleStringScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleStringScene.cpp; path = scenes/SingleStringScene.cpp; sourceTree = "<group>"; };
+		88872D951A26D15E006D42DA /* SingleStringScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleStringScene.h; path = scenes/SingleStringScene.h; sourceTree = "<group>"; };
+		8893BB321A266EE30012A28C /* NoteSendScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NoteSendScene.cpp; path = scenes/NoteSendScene.cpp; sourceTree = "<group>"; };
+		8893BB331A266EE30012A28C /* NoteSendScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteSendScene.h; path = scenes/NoteSendScene.h; sourceTree = "<group>"; };
 		88A3AAA919E66B60001FD7AE /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		88A3AAAA19E66B60001FD7AE /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		88A8559C19ED8FA0005AF18C /* Rice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rice.cpp; sourceTree = "<group>"; };
@@ -1346,9 +1352,13 @@
 				88E76B101A13403A0090E1F6 /* LineChaseScene.h */,
 				886405AE19E4781300408336 /* ParticleScene.cpp */,
 				886405AF19E4781300408336 /* ParticleScene.h */,
+				88872D941A26D15E006D42DA /* SingleStringScene.cpp */,
+				88872D951A26D15E006D42DA /* SingleStringScene.h */,
 				888680EF19E6170200A9FB4B /* CircleScene.cpp */,
 				88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */,
 				88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */,
+				8893BB321A266EE30012A28C /* NoteSendScene.cpp */,
+				8893BB331A266EE30012A28C /* NoteSendScene.h */,
 				888680F019E6170200A9FB4B /* CircleScene.h */,
 				888680F319E6171F00A9FB4B /* Scenes.h */,
 				888680F419E6175F00A9FB4B /* Circle.cpp */,
@@ -1817,6 +1827,7 @@
 				8864052019E4672100408336 /* ofxUISuperCanvas.cpp in Sources */,
 				8864050419E4672100408336 /* ofxUICircleSlider.cpp in Sources */,
 				88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */,
+				8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */,
 				8864049519E4671B00408336 /* ofxRParticleRenderer.cpp in Sources */,
 				886405A519E46CBE00408336 /* guiTypeToggle.cpp in Sources */,
 				8864048E19E4671B00408336 /* ofxLorentzBehavior.cpp in Sources */,
@@ -1839,6 +1850,7 @@
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				8864048619E4671B00408336 /* ofxDistorterBehavior.cpp in Sources */,
 				8864050F19E4672100408336 /* ofxUILabel.cpp in Sources */,
+				88872D961A26D15E006D42DA /* SingleStringScene.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				8864051819E4672100408336 /* ofxUIRangeSlider.cpp in Sources */,
 				8864048D19E4671B00408336 /* ofxHomingBehavior.cpp in Sources */,

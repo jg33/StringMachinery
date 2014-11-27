@@ -16,5 +16,7 @@
 #include "FragmentScene.h"
 #include "LineChaseScene.h"
 #include "VennScene.h"
+#include "NoteSendScene.h"
+#include "SingleStringScene.h"
 
 #endif
