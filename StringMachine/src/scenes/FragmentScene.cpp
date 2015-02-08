@@ -10,6 +10,7 @@
 
 
 void FragmentScene::setup(){
+    ofDisableLighting();
     image.load("wackTest.svg");
     fragments.clear();
     for(int i=0;i<image.getNumPath();i++){

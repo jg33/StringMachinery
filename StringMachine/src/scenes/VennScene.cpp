@@ -9,6 +9,8 @@
 #include "VennScene.h"
 
 void VennScene::setup(){
+    ofDisableLighting();
+    ofDisableAlphaBlending();
     left = VennCircle(LEFT);
     right = VennCircle(RIGHT);
     

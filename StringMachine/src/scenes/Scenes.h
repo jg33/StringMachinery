@@ -19,5 +19,6 @@
 #include "NoteSendScene.h"
 #include "SingleStringScene.h"
 #include "WaveScene.h"
+#include "BoidScene.h"
 
 #endif

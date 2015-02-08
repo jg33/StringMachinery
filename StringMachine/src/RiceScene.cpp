@@ -9,6 +9,7 @@
 #include "RiceScene.h"
 
 void RiceScene::setup(){
+    ofDisableLighting();
     pBoss = ofxParticleManager();
     cout<<"setup rice!"<<endl;
     finishedEntering();

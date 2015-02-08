@@ -17,6 +17,7 @@ void ofApp::setup(){
     noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphonServe));
     single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
     waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
+    sceneManager.add(new BoidScene(&syphonServe));
     
     
     sceneManager.setup(true);

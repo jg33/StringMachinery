@@ -9,6 +9,7 @@
 #include "LineChaseScene.h"
 
 void LineChaseScene::setup(){
+    ofDisableLighting();
     cout<<"setup line chase!"<<endl;
     for (int i = 0; i<NUM_LINES; i++) {
         lines.push_back(LineChaser(200+ (i*50) ));

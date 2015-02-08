@@ -9,7 +9,7 @@
 #include "ConnectorScene.h"
 
 void ConnectorScene::setup(){
-    
+    ofDisableLighting();
     
 }
 
