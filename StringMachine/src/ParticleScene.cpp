@@ -9,7 +9,8 @@
 #include "ParticleScene.h"
 
 void ParticleScene::setup(){
-    
+    ofDisableLighting();
+
     pBoss = ofxParticleManager();
     attractive.setup(pBoss.getParticlesPtr());
     cout<<"setup particles!"<<endl;

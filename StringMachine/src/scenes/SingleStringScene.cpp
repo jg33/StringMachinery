@@ -10,6 +10,9 @@
 
 
 void LittleString::setup(){
+    ofDisableLighting();
+    seed = ofRandom(1000);
+
     for (int i=0; i< numPoints; i++) {
         float x = sin(i)*radius;
         float y = cos(i)*radius;
@@ -22,19 +25,21 @@ void LittleString::setup(){
 void LittleString::update(){
     
     points.clear();
-    for(int i=0;i<numPoints;i++){
-        ofPoint noise = ofPoint(ofNoise(i+ofGetElapsedTimef())*5, ofNoise(i+ofGetElapsedTimef()+1.3)*5 );
-        
-        ofPoint twister = ofPoint( cos(i*2)*twist , 0 , sin(i*2)*twist );
-        
-        points.push_back(basePoints[i] + noise + twister);
-        
-        
-    }
+    
+        for(int i=0;i<numPoints;i++){
+            ofPoint noise = ofPoint(ofNoise(seed+i+ofGetElapsedTimef())*5, ofNoise(seed+i+ofGetElapsedTimef()+1.3)*5 );
+            
+            ofPoint twister = ofPoint( cos(i*2)*twist , 0 , sin(i*2)*twist );
+            points.push_back(basePoints[i] + noise + twister);
+            
+            
+        }
     
     
     line.clear();
-    for (int i=0; i< numPoints; i++) {
+    for (int i=0; i< basePoints.size(); i++) {
+        
+        
         line.curveTo(points[i]);
         
     }
@@ -44,6 +49,17 @@ void LittleString::update(){
 }
 
 void LittleString::draw(){
+    if(isFilling){
+        ofBeginShape();
+        ofSetColor(50);
+        ofFill();
+        
+        for( int i = 0; i < line.getVertices().size(); i++) {
+            ofVertex(line.getVertices().at(i).x, line.getVertices().at(i).y);
+        }
+        ofEndShape();
+    }
+    ofSetColor(255);
     line.draw();
 }
 

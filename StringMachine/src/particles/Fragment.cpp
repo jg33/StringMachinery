@@ -12,17 +12,26 @@ void Fragment::setup(){
     decay = 10;
     
     loc = ofVec3f(ofRandom(1000), ofRandom(1000));
-    //outlines = shape.getOutline();
+    outlines = shape.getOutline();
     
     //cout<<shape.getOutline().size()<<endl;
     shape.setFilled(true);
+    
+    seed = ofRandom(6666);
+    basePulseSpeed = ofRandom(0.8, 1.2);
+    pulseSpeed = basePulseSpeed;
+     
 }
 
 void Fragment::update(){
-    brightness-=decay;
-    if(brightness<0) brightness = 0;
     
-    float scale = ofMap(brightness, 0, 255, 0, 1);
+    if (isPulseMode) {
+        brightness = ofMap(sinf(seed+ofGetElapsedTimef()*pulseSpeed), -1, 1, 0, maxBrightness);
+    } else {
+        brightness-=decay;
+        if(brightness<0) brightness = 0;
+    }
+    float scale = ofMap(brightness, 0, maxBrightness, 0, 1);
     
     //shape.close();
     shape.setFillColor(brightness);
@@ -36,9 +45,9 @@ void Fragment::update(){
 void Fragment::draw(){
     //ofSetColor(255);
     //ofDrawRectangle(loc, 50, 50);
-
+    ofPushStyle();
     shape.draw();
-    
+    ofPopStyle();
 
     
 }

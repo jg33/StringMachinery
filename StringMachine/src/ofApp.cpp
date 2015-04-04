@@ -18,12 +18,14 @@ void ofApp::setup(){
     single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
     waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
     sceneManager.add(new BoidScene(&syphonServe));
-    
+    sceneManager.add(new AmoebaScene(&syphonServe));
+    pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphonServe));
+
     
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
-    sceneManager.gotoScene("Waves", true);
+    sceneManager.gotoScene("Amoeba", true);
 
 
     
@@ -43,13 +45,18 @@ void ofApp::setup(){
     controlPanel.setWhichPanel("Rice");
     controlPanel.addSlider2D("Wind", "wind", 0, 0, -0.001, 0.001, -0.001, 0.001, false);
     
+    controlPanel.addPanel("Pulse", 1);
+    controlPanel.setWhichPanel("Pulse");
+    controlPanel.addSlider("Speed", "pulseSpeed", 1, 0, 5, false);
+    controlPanel.addSlider("Max Brightness", "maxPulseBright", 150, 0, 255, true);
+    
     controlPanel.setupEvents();
     controlPanel.enableEvents();
     ofAddListener(controlPanel.guiEvent, this, &ofApp::onGuiEvent);
     
     //////SCENE SPECIFICS/////////
-    connections->setPoints(&POIs);
-    connections->setPointPower(&POIpower);
+    //connections->setPoints(&POIs);
+    //connections->setPointPower(&POIpower);
     
     for(int i=0;i<50;i++){
         POIs[i] = ofVec3f(ofRandom(ofGetWidth()),ofRandom(ofGetHeight()));
@@ -94,10 +101,13 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     popTransforms();
+    ofPopStyle();
     
     
     //drawControlPanel();
     //drawFramerate(10, 10);
+    
+    syphonServe.publishScreen();
 }
 
 void ofApp::onGuiEvent(guiCallbackData & d){
@@ -107,6 +117,10 @@ void ofApp::onGuiEvent(guiCallbackData & d){
         cout<< "set POI!"<<endl;
     } else if(d.getXmlName() =="wind"){
         rice->setWind (ofVec3f(d.getFloat(0),d.getFloat(1)));
+    } else if(d.getXmlName() == "pulseSpeed"){
+        pulse->setSpeed(d.getFloat(0));
+    } else if(d.getXmlName() == "maxPulseBright"){
+        pulse->setMaxBrightness(d.getFloat(0));
     }
 }
 
@@ -124,6 +138,9 @@ void ofApp::keyPressed(int key){
             break;
             case 'm':
             noteSend->addNote((int)ofRandom(127), (int)ofRandom(127));
+            break;
+            case 'g':
+            connections->startGrowth();
             break;
 
     }

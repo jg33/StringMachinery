@@ -20,5 +20,7 @@
 #include "SingleStringScene.h"
 #include "WaveScene.h"
 #include "BoidScene.h"
+#include "AmoebaScene.h"
+#include "PulseScene.h"
 
 #endif

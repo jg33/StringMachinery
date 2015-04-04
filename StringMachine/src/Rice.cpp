@@ -30,6 +30,7 @@ void Rice::customUpdate(){
 
 void Rice::draw(){
     //ofBackground(0) ;
+    ofPushStyle();
     ofPushMatrix();
     ofSetRectMode(OF_RECTMODE_CENTER);
     ofTranslate(pos);
@@ -38,5 +39,6 @@ void Rice::draw(){
     ofRotateZ(rotation.z);
     ofRect(0,0,0, size, size/2);
     ofPopMatrix();
+    ofPopStyle();
 }
 

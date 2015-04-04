@@ -18,15 +18,18 @@ class LittleString{
 public:
     LittleString(){};
     void setup();
+    inline void setup(float _radius){radius=_radius; setup(); };
     void update();
     void draw();
+    float radius = 50;
+    bool isFilling = true;
     
 private:
-    float radius = 50;
     float rotation;
     float twist;
     
     int numPoints = 15;
+    int seed;
     
     vector<ofVec3f> basePoints, points;
     

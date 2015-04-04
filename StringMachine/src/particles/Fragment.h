@@ -25,6 +25,13 @@ public:
     
     void fire(int level);
     inline void setDecay(float _decay){decay = _decay;};
+    inline void setMaxBrightness(int max){maxBrightness=max;};
+    inline void setPulseMode(bool pulse){isPulseMode=pulse;};
+    inline void setPulseSpeed(float speed){pulseSpeed=basePulseSpeed*speed;};
+
+    
+    bool isPulseMode = false;
+    float pulseSpeed = 1;
     
 private:
     
@@ -33,9 +40,11 @@ private:
     ofPath shape;
     vector<ofPolyline> outlines;
     
-    float brightness;
+    float brightness, maxBrightness;
     float decay;
     
+    int seed;
+    float basePulseSpeed;
     //ofxTimer timer;
     
 };

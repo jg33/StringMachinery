@@ -36,6 +36,7 @@ void LineChaser::update(){
 }
 
 void LineChaser::draw(){
+    ofPushStyle();
     ofSetColor(255);
     ofSetLineWidth(3);
     line.draw();
@@ -45,6 +46,8 @@ void LineChaser::draw(){
     if(points.size()>0){
         //ofDrawCircle(points[points.size()-1], 5);
     }
+    
+    ofPopStyle();
     }
 
 void LineChaser::setDisplacement(float d){

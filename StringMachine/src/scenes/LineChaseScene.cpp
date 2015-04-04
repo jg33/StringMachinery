@@ -10,6 +10,7 @@
 
 void LineChaseScene::setup(){
     ofDisableLighting();
+    ofDisableAlphaBlending();
     cout<<"setup line chase!"<<endl;
     for (int i = 0; i<NUM_LINES; i++) {
         lines.push_back(LineChaser(200+ (i*50) ));
@@ -26,6 +27,9 @@ void LineChaseScene::update(){
 
 
 void LineChaseScene::draw(){
+    
+    if(ofGetLightingEnabled()) ofDisableLighting();
+    
     ofBackground(0);
     
     for (int i = 0; i<lines.size(); i++) {

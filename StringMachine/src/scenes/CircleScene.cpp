@@ -10,6 +10,8 @@
 
 
 void CircleScene::setup(){
+    ofDisableLighting();
+
     for (int i=0; i<NUMCIRCLES; i++) {
         circles.push_back(Circle());
         
@@ -49,6 +51,8 @@ void CircleScene::setSizes(vector<float> s){
 
 
 void CircleScene::draw(){
+    if(ofGetLightingEnabled()) ofDisableLighting();
+
     ofBackground(0);
     for (int i=0; i<circles.size(); i++) {
         circles[i].draw();

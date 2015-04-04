@@ -12,7 +12,6 @@
 		1298066D39CE7EC3DA60256A /* snappy-stubs-internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2FB74FF42B08FC378F74B2B7 /* snappy-stubs-internal.cc */; };
 		1CC07C1A616F29EB8EEC3D21 /* SearchPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D76B424A6DF4D70AACCDBAE /* SearchPath.cpp */; };
 		1F558B76FB3412843DDAA031 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */; };
-		28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */; };
 		3BFC7CF50BEB0307821B90A6 /* lz4.c in Sources */ = {isa = PBXBuildFile; fileRef = 7913239832BBBF6B56ED2600 /* lz4.c */; };
 		3C9A355A55D68A8E882FEF85 /* RegexPathFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13D68F0C2CAE7809D621924C /* RegexPathFilter.cpp */; };
 		494950167FFB212CEB9ECD0A /* ByteBufferWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9BE77ADAEF79E623523E9D9 /* ByteBufferWriter.cpp */; };
@@ -31,6 +30,12 @@
 		868BEDC19B53FD512D7E3100 /* snappy.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7362D621E1B9A92F5F4AC73B /* snappy.cc */; };
 		86B56E23D787A5F24641398F /* LinkFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 370DA13018950E5BFF8CF171 /* LinkFilter.cpp */; };
 		879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */; };
+		882FAC4D1ACF3BFF00403F89 /* PulseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */; };
+		885456071ACA598400BB1D27 /* LightingShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456011ACA598400BB1D27 /* LightingShader.cpp */; };
+		885456081ACA598400BB1D27 /* LightingShader_sources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456021ACA598400BB1D27 /* LightingShader_sources.cpp */; };
+		885456091ACA598400BB1D27 /* ofxShadersFX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456031ACA598400BB1D27 /* ofxShadersFX.cpp */; };
+		885456221ACA64D500BB1D27 /* ofxDelaunay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8854561B1ACA64D500BB1D27 /* ofxDelaunay.cpp */; };
+		885456231ACA64D500BB1D27 /* Delaunay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456201ACA64D500BB1D27 /* Delaunay.cpp */; };
 		8864048219E4671B00408336 /* ofxBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864043C19E4671B00408336 /* ofxBehavior.cpp */; };
 		8864048319E4671B00408336 /* ofxBoundaryBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864043F19E4671B00408336 /* ofxBoundaryBehavior.cpp */; };
 		8864048419E4671B00408336 /* ofxBufferEffectorBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864044119E4671B00408336 /* ofxBufferEffectorBehavior.cpp */; };
@@ -144,6 +149,9 @@
 		886405AB19E46CBE00408336 /* simpleFileLister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864058E19E46CBE00408336 /* simpleFileLister.cpp */; };
 		886405AC19E46CBE00408336 /* simpleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864059019E46CBE00408336 /* simpleLogger.cpp */; };
 		886405B019E4781300408336 /* ParticleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886405AE19E4781300408336 /* ParticleScene.cpp */; };
+		887A95FF1A8190300023FAC9 /* BoidScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A95FD1A8190300023FAC9 /* BoidScene.cpp */; };
+		887A960D1A81C4AD0023FAC9 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A96091A81C4AD0023FAC9 /* Boid.cpp */; };
+		887A960E1A81C4AD0023FAC9 /* ofxFlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */; };
 		888267FD1A0B30AC00C172FF /* FragmentScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888267FB1A0B30AC00C172FF /* FragmentScene.cpp */; };
 		888268001A0B322500C172FF /* Fragment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888267FE1A0B322500C172FF /* Fragment.cpp */; };
 		8882680F1A0C209400C172FF /* ofxSvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888268041A0C209400C172FF /* ofxSvg.cpp */; };
@@ -159,6 +167,7 @@
 		88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A3AAA919E66B60001FD7AE /* Particle.cpp */; };
 		88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559C19ED8FA0005AF18C /* Rice.cpp */; };
 		88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559F19ED9184005AF18C /* RiceScene.cpp */; };
+		88B8EF101ACA4E91009F8FE1 /* AmoebaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */; };
 		88C372FD19EC5CDF00FBDED8 /* ConnectorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */; };
 		88D76BA419E8A0DC00D870B0 /* CirclePart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88D76BA219E8A0DC00D870B0 /* CirclePart.cpp */; };
 		88D76BA819E8A3AB00D870B0 /* Attractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88D76BA619E8A3AB00D870B0 /* Attractor.cpp */; };
@@ -169,7 +178,6 @@
 		8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32D6F27DC6308427F9A278C1 /* ofxSyphonServer.mm */; };
 		8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */; };
 		93640C223A2F5BEAD6DA2E35 /* Compression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FC8E2266FE2F5545775A16D /* Compression.cpp */; };
-		A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B1FAD3F30C8065C396ACB /* NetworkingUtilsWin.cpp */; };
 		A86D7323CE1A9450906A91DD /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85440CFD1540D81C05B85CB /* fft.cpp */; };
 		ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADD194746185E2DA11468377 /* IpEndpointName.cpp */; };
 		B3E6D60405574847412D7441 /* HiddenFileFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCAF85B857266C511DB50341 /* HiddenFileFilter.cpp */; };
@@ -258,7 +266,6 @@
 		20F35AFADAF0068B067E713F /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		22565CAF8FFEF25C805A438F /* HexBinaryEncoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HexBinaryEncoding.cpp; path = ../../../addons/ofxIO/libs/ofxIO/src/HexBinaryEncoding.cpp; sourceTree = SOURCE_ROOT; };
 		23640F57DF6C4BB6BFC5DA4C /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
-		2A5B1FAD3F30C8065C396ACB /* NetworkingUtilsWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtilsWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/NetworkingUtilsWin.cpp; sourceTree = SOURCE_ROOT; };
 		2BC552B95352F479531DC424 /* snappy-stubs-internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-stubs-internal.h"; path = "../../../addons/ofxIO/libs/snappy/src/snappy-stubs-internal.h"; sourceTree = SOURCE_ROOT; };
 		2D170F102215CF0511959D79 /* ByteBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBuffer.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBuffer.h; sourceTree = SOURCE_ROOT; };
 		2F6C7F53A990035EB21AC78C /* LRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LRUCache.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/LRUCache.h; sourceTree = SOURCE_ROOT; };
@@ -286,7 +293,6 @@
 		5114D2AF276E4E6E9A67B342 /* PathFilterCollection.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PathFilterCollection.cpp; path = ../../../addons/ofxIO/libs/ofxIO/src/PathFilterCollection.cpp; sourceTree = SOURCE_ROOT; };
 		557678EEFF0D0C6D692D0DEC /* DeviceFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeviceFilter.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/DeviceFilter.h; sourceTree = SOURCE_ROOT; };
 		57E858FCDF1AB73089F1A9F0 /* HiddenFileFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HiddenFileFilter.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/HiddenFileFilter.h; sourceTree = SOURCE_ROOT; };
-		5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocketWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/UdpSocketWin.cpp; sourceTree = SOURCE_ROOT; };
 		5D4C9D17E0C3F84DDB888544 /* ByteBufferUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBufferUtils.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferUtils.h; sourceTree = SOURCE_ROOT; };
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		64F728D0405D9777ECF43CD9 /* Base64Encoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Base64Encoding.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/Base64Encoding.h; sourceTree = SOURCE_ROOT; };
@@ -303,6 +309,18 @@
 		8425D8F4B3E525C269FBBD90 /* ExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ExpireLRUCache.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/ExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
 		84E9CE5123D831AC5EA325A1 /* AccessExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AccessExpireLRUCache.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/AccessExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
 		85B399C99F9879F6C78EDE1B /* snappy-stubs-public.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-stubs-public.h"; path = "../../../addons/ofxIO/libs/snappy/src/snappy-stubs-public.h"; sourceTree = SOURCE_ROOT; };
+		882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PulseScene.cpp; path = scenes/PulseScene.cpp; sourceTree = "<group>"; };
+		882FAC4C1ACF3BFF00403F89 /* PulseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PulseScene.h; path = scenes/PulseScene.h; sourceTree = "<group>"; };
+		885456011ACA598400BB1D27 /* LightingShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightingShader.cpp; sourceTree = "<group>"; };
+		885456021ACA598400BB1D27 /* LightingShader_sources.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightingShader_sources.cpp; sourceTree = "<group>"; };
+		885456031ACA598400BB1D27 /* ofxShadersFX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxShadersFX.cpp; sourceTree = "<group>"; };
+		885456041ACA598400BB1D27 /* ofxShadersFX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxShadersFX.h; sourceTree = "<group>"; };
+		885456051ACA598400BB1D27 /* ofxShadersFX_LightingShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxShadersFX_LightingShader.h; sourceTree = "<group>"; };
+		885456061ACA598400BB1D27 /* ofxShadersFX_Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxShadersFX_Shader.h; sourceTree = "<group>"; };
+		8854561B1ACA64D500BB1D27 /* ofxDelaunay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDelaunay.cpp; sourceTree = "<group>"; };
+		8854561C1ACA64D500BB1D27 /* ofxDelaunay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxDelaunay.h; sourceTree = "<group>"; };
+		885456201ACA64D500BB1D27 /* Delaunay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Delaunay.cpp; sourceTree = "<group>"; };
+		885456211ACA64D500BB1D27 /* Delaunay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delaunay.h; sourceTree = "<group>"; };
 		8864042B19E4671B00408336 /* ofxBoidParticle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBoidParticle.h; sourceTree = "<group>"; };
 		8864042C19E4671B00408336 /* ofxBoidSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBoidSystem.h; sourceTree = "<group>"; };
 		8864042D19E4671B00408336 /* ofxCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxCircle.h; sourceTree = "<group>"; };
@@ -570,6 +588,12 @@
 		8864059119E46CBE00408336 /* simpleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleLogger.h; sourceTree = "<group>"; };
 		886405AE19E4781300408336 /* ParticleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleScene.cpp; sourceTree = "<group>"; };
 		886405AF19E4781300408336 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
+		887A95FD1A8190300023FAC9 /* BoidScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoidScene.cpp; path = scenes/BoidScene.cpp; sourceTree = "<group>"; };
+		887A95FE1A8190300023FAC9 /* BoidScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoidScene.h; path = scenes/BoidScene.h; sourceTree = "<group>"; };
+		887A96091A81C4AD0023FAC9 /* Boid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
+		887A960A1A81C4AD0023FAC9 /* Boid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
+		887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFlocking.cpp; sourceTree = "<group>"; };
+		887A960C1A81C4AD0023FAC9 /* ofxFlocking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFlocking.h; sourceTree = "<group>"; };
 		888267FB1A0B30AC00C172FF /* FragmentScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FragmentScene.cpp; path = scenes/FragmentScene.cpp; sourceTree = "<group>"; };
 		888267FC1A0B30AC00C172FF /* FragmentScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FragmentScene.h; path = scenes/FragmentScene.h; sourceTree = "<group>"; };
 		888267FE1A0B322500C172FF /* Fragment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Fragment.cpp; path = particles/Fragment.cpp; sourceTree = "<group>"; };
@@ -599,6 +623,8 @@
 		88A8559D19ED8FA0005AF18C /* Rice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rice.h; sourceTree = "<group>"; };
 		88A8559F19ED9184005AF18C /* RiceScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RiceScene.cpp; sourceTree = "<group>"; };
 		88A855A019ED9184005AF18C /* RiceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiceScene.h; sourceTree = "<group>"; };
+		88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmoebaScene.cpp; path = scenes/AmoebaScene.cpp; sourceTree = "<group>"; };
+		88B8EF0F1ACA4E91009F8FE1 /* AmoebaScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmoebaScene.h; path = scenes/AmoebaScene.h; sourceTree = "<group>"; };
 		88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnectorScene.cpp; path = scenes/ConnectorScene.cpp; sourceTree = "<group>"; };
 		88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectorScene.h; path = scenes/ConnectorScene.h; sourceTree = "<group>"; };
 		88D76BA219E8A0DC00D870B0 /* CirclePart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CirclePart.cpp; path = ../particles/CirclePart.cpp; sourceTree = "<group>"; };
@@ -937,6 +963,73 @@
 				D27B2221A225CA523C019676 /* src */,
 			);
 			name = oscpack;
+			sourceTree = "<group>";
+		};
+		885455FF1ACA598400BB1D27 /* ofxShadersFX */ = {
+			isa = PBXGroup;
+			children = (
+				885456001ACA598400BB1D27 /* src */,
+			);
+			name = ofxShadersFX;
+			sourceTree = "<group>";
+		};
+		885456001ACA598400BB1D27 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				885456011ACA598400BB1D27 /* LightingShader.cpp */,
+				885456021ACA598400BB1D27 /* LightingShader_sources.cpp */,
+				885456031ACA598400BB1D27 /* ofxShadersFX.cpp */,
+				885456041ACA598400BB1D27 /* ofxShadersFX.h */,
+				885456051ACA598400BB1D27 /* ofxShadersFX_LightingShader.h */,
+				885456061ACA598400BB1D27 /* ofxShadersFX_Shader.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxShadersFX/src;
+			sourceTree = "<group>";
+		};
+		885456191ACA64D500BB1D27 /* ofxDelaunay */ = {
+			isa = PBXGroup;
+			children = (
+				8854561A1ACA64D500BB1D27 /* src */,
+				8854561D1ACA64D500BB1D27 /* libs */,
+			);
+			name = ofxDelaunay;
+			sourceTree = "<group>";
+		};
+		8854561A1ACA64D500BB1D27 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8854561B1ACA64D500BB1D27 /* ofxDelaunay.cpp */,
+				8854561C1ACA64D500BB1D27 /* ofxDelaunay.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxDelaunay/src;
+			sourceTree = "<group>";
+		};
+		8854561D1ACA64D500BB1D27 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				8854561E1ACA64D500BB1D27 /* Delaunay */,
+			);
+			name = libs;
+			path = ../../../addons/ofxDelaunay/libs;
+			sourceTree = "<group>";
+		};
+		8854561E1ACA64D500BB1D27 /* Delaunay */ = {
+			isa = PBXGroup;
+			children = (
+				8854561F1ACA64D500BB1D27 /* src */,
+			);
+			path = Delaunay;
+			sourceTree = "<group>";
+		};
+		8854561F1ACA64D500BB1D27 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				885456201ACA64D500BB1D27 /* Delaunay.cpp */,
+				885456211ACA64D500BB1D27 /* Delaunay.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		8864042819E4671B00408336 /* ofxGenerative */ = {
@@ -1299,6 +1392,26 @@
 			path = ../../../addons/ofxControlPanel/src;
 			sourceTree = "<group>";
 		};
+		887A96071A81C4AD0023FAC9 /* ofxFlocking */ = {
+			isa = PBXGroup;
+			children = (
+				887A96081A81C4AD0023FAC9 /* src */,
+			);
+			name = ofxFlocking;
+			sourceTree = "<group>";
+		};
+		887A96081A81C4AD0023FAC9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				887A96091A81C4AD0023FAC9 /* Boid.cpp */,
+				887A960A1A81C4AD0023FAC9 /* Boid.h */,
+				887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */,
+				887A960C1A81C4AD0023FAC9 /* ofxFlocking.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxFlocking/src;
+			sourceTree = "<group>";
+		};
 		888268021A0C209400C172FF /* ofxSvg */ = {
 			isa = PBXGroup;
 			children = (
@@ -1357,11 +1470,11 @@
 				886405AF19E4781300408336 /* ParticleScene.h */,
 				88872D941A26D15E006D42DA /* SingleStringScene.cpp */,
 				88872D951A26D15E006D42DA /* SingleStringScene.h */,
-				888680EF19E6170200A9FB4B /* CircleScene.cpp */,
 				88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */,
 				88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */,
 				8893BB321A266EE30012A28C /* NoteSendScene.cpp */,
 				8893BB331A266EE30012A28C /* NoteSendScene.h */,
+				888680EF19E6170200A9FB4B /* CircleScene.cpp */,
 				888680F019E6170200A9FB4B /* CircleScene.h */,
 				888680F319E6171F00A9FB4B /* Scenes.h */,
 				888680F419E6175F00A9FB4B /* Circle.cpp */,
@@ -1374,6 +1487,12 @@
 				88E76B3B1A134F3F0090E1F6 /* VennScene.h */,
 				88872D971A26E3D3006D42DA /* WaveScene.cpp */,
 				88872D981A26E3D3006D42DA /* WaveScene.h */,
+				887A95FD1A8190300023FAC9 /* BoidScene.cpp */,
+				887A95FE1A8190300023FAC9 /* BoidScene.h */,
+				88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */,
+				88B8EF0F1ACA4E91009F8FE1 /* AmoebaScene.h */,
+				882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */,
+				882FAC4C1ACF3BFF00403F89 /* PulseScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1431,15 +1550,6 @@
 			name = alphanum;
 			sourceTree = "<group>";
 		};
-		BA6760AC87647DD61A92BD41 /* win32 */ = {
-			isa = PBXGroup;
-			children = (
-				2A5B1FAD3F30C8065C396ACB /* NetworkingUtilsWin.cpp */,
-				5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */,
-			);
-			name = win32;
-			sourceTree = "<group>";
-		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1454,6 +1564,9 @@
 				A8792B4B23B2F70E1065D67F /* ofxIO */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				7F3C04577424427D348B1425 /* ofxSyphon */,
+				887A96071A81C4AD0023FAC9 /* ofxFlocking */,
+				885455FF1ACA598400BB1D27 /* ofxShadersFX */,
+				885456191ACA64D500BB1D27 /* ofxDelaunay */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -1634,7 +1747,6 @@
 				641362CA659FAFEE4E81001B /* posix */,
 				444657A12E59D0ED86981498 /* TimerListener.h */,
 				2FD4B0329909D3527F003494 /* UdpSocket.h */,
-				BA6760AC87647DD61A92BD41 /* win32 */,
 			);
 			name = ip;
 			sourceTree = "<group>";
@@ -1735,6 +1847,7 @@
 				8864059619E46CBE00408336 /* guiTextBase.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				886404FE19E4672100408336 /* ofxUI2DGraph.cpp in Sources */,
+				88B8EF101ACA4E91009F8FE1 /* AmoebaScene.cpp in Sources */,
 				886405A719E46CBE00408336 /* guiTypeVideo.cpp in Sources */,
 				8864051719E4672100408336 /* ofxUIRadio.cpp in Sources */,
 				886405A619E46CBE00408336 /* guiTypeVairableLister.cpp in Sources */,
@@ -1763,11 +1876,13 @@
 				888268101A0C209400C172FF /* src_colors.cpp in Sources */,
 				D932A5A24FCF08AE510A265D /* ByteBuffer.cpp in Sources */,
 				8864059A19E46CBE00408336 /* guiTypeCustom.cpp in Sources */,
+				885456231ACA64D500BB1D27 /* Delaunay.cpp in Sources */,
 				62509F39EA6197BEA0194276 /* ByteBufferReader.cpp in Sources */,
 				8864059219E46CBE00408336 /* guiBaseObject.cpp in Sources */,
 				8864048A19E4671B00408336 /* ofxFieldEffectBehavior.cpp in Sources */,
 				8864051B19E4672100408336 /* ofxUIScrollableCanvas.cpp in Sources */,
 				8864059919E46CBE00408336 /* guiTypeChartPlotter.cpp in Sources */,
+				885456221ACA64D500BB1D27 /* ofxDelaunay.cpp in Sources */,
 				66A80FD312926DEB8C9FE7F6 /* ByteBufferUtils.cpp in Sources */,
 				8864050E19E4672100408336 /* ofxUIImageToggle.cpp in Sources */,
 				886405B019E4781300408336 /* ParticleScene.cpp in Sources */,
@@ -1776,7 +1891,9 @@
 				494950167FFB212CEB9ECD0A /* ByteBufferWriter.cpp in Sources */,
 				FE9170FE54D704DF97B0E5BD /* COBSEncoding.cpp in Sources */,
 				8864059B19E46CBE00408336 /* guiTypeDrawable.cpp in Sources */,
+				887A95FF1A8190300023FAC9 /* BoidScene.cpp in Sources */,
 				8864048519E4671B00408336 /* ofxDamperBehavior.cpp in Sources */,
+				882FAC4D1ACF3BFF00403F89 /* PulseScene.cpp in Sources */,
 				888268111A0C209400C172FF /* svgtiny.cpp in Sources */,
 				888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */,
 				8864059819E46CBE00408336 /* guiTypeButtonSlider.cpp in Sources */,
@@ -1802,12 +1919,14 @@
 				8864052219E4672100408336 /* ofxUITextArea.cpp in Sources */,
 				8864051319E4672100408336 /* ofxUIMovingGraph.cpp in Sources */,
 				5BB82711925A3764235C2CEB /* FileExtensionFilter.cpp in Sources */,
+				885456091ACA598400BB1D27 /* ofxShadersFX.cpp in Sources */,
 				888268121A0C209400C172FF /* svgtiny_gradient.cpp in Sources */,
 				F953E11952BFF8C207418550 /* HexBinaryEncoding.cpp in Sources */,
 				8864055219E46CAE00408336 /* ofxScene.cpp in Sources */,
 				8864059D19E46CBE00408336 /* guiTypeLabel.cpp in Sources */,
 				B3E6D60405574847412D7441 /* HiddenFileFilter.cpp in Sources */,
 				8864049619E4671B00408336 /* ofxRParticleSystem.cpp in Sources */,
+				885456071ACA598400BB1D27 /* LightingShader.cpp in Sources */,
 				86B56E23D787A5F24641398F /* LinkFilter.cpp in Sources */,
 				8864052819E4672100408336 /* ofxUIWidget.cpp in Sources */,
 				8864049019E4671B00408336 /* ofxRingAttractionBehavior.cpp in Sources */,
@@ -1827,6 +1946,7 @@
 				8864059C19E46CBE00408336 /* guiTypeFileLister.cpp in Sources */,
 				8864048F19E4671B00408336 /* ofxPerlinBehavior.cpp in Sources */,
 				886405A319E46CBE00408336 /* guiTypeTextDropDown.cpp in Sources */,
+				887A960E1A81C4AD0023FAC9 /* ofxFlocking.cpp in Sources */,
 				8864049919E4671B00408336 /* ofxSpring.cpp in Sources */,
 				8864050919E4672100408336 /* ofxUIFPSSlider.cpp in Sources */,
 				8864052019E4672100408336 /* ofxUISuperCanvas.cpp in Sources */,
@@ -1834,6 +1954,7 @@
 				88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */,
 				8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */,
 				8864049519E4671B00408336 /* ofxRParticleRenderer.cpp in Sources */,
+				885456081ACA598400BB1D27 /* LightingShader_sources.cpp in Sources */,
 				886405A519E46CBE00408336 /* guiTypeToggle.cpp in Sources */,
 				8864048E19E4671B00408336 /* ofxLorentzBehavior.cpp in Sources */,
 				88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */,
@@ -1849,6 +1970,7 @@
 				8864048219E4671B00408336 /* ofxBehavior.cpp in Sources */,
 				8864049C19E4671B00408336 /* ofxVerletSolver.cpp in Sources */,
 				8864048719E4671B00408336 /* ofxElectroStaticBehavior.cpp in Sources */,
+				887A960D1A81C4AD0023FAC9 /* Boid.cpp in Sources */,
 				8864059E19E46CBE00408336 /* guiTypeLogger.cpp in Sources */,
 				868BEDC19B53FD512D7E3100 /* snappy.cc in Sources */,
 				8864053419E4675900408336 /* tinyxml.cpp in Sources */,
@@ -1877,12 +1999,10 @@
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				886405A819E46CBE00408336 /* guiValue.cpp in Sources */,
 				8864059F19E46CBE00408336 /* guiTypeMultiToggle.cpp in Sources */,
-				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
 				8864051619E4672100408336 /* ofxUINumberDialer.cpp in Sources */,
 				8864048319E4671B00408336 /* ofxBoundaryBehavior.cpp in Sources */,
 				88E76B111A13403A0090E1F6 /* LineChaseScene.cpp in Sources */,
 				886405A419E46CBE00408336 /* guiTypeTextInput.cpp in Sources */,
-				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
 				8864051919E4672100408336 /* ofxUIRectangle.cpp in Sources */,
 				888680F619E6175F00A9FB4B /* Circle.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
