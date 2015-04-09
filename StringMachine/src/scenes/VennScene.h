@@ -33,7 +33,7 @@ public:
     inline void setLoc(ofVec2f v){loc=v;};
     inline void setDisplace(float d){displacement = d;};
     inline float getRadius(){return radius;};
-    
+    inline void setWiggle(float amt){};
     
 private:
     vennSide side;
@@ -46,7 +46,7 @@ private:
     int circleResolution = 15;
     
     vector<ofVec3f> basePoints, currentPoints;
-
+    float wiggle =30;
     
     ofPolyline line;
     
@@ -66,11 +66,18 @@ public:
     
     void setLocs(vector<float> _inputs){};
     
+    float leftDisplace=1;
+    float rightDisplace=1;
+    
+    inline float setSize(int i, float amt){ }
+    inline void setDisplace(int i, float amt){circles[i].setDisplace(amt);};
+    inline void setWiggle(int i, float amt){circles[i].setWiggle(amt);};
+    inline void setRotationSpeed(float amt){};
     
 private:
     ofxSyphonServer * syphon;
     
-    VennCircle left, right;
+    vector<VennCircle>  circles;
     ofPath overlapShape;
     
     ofMesh testMesh;

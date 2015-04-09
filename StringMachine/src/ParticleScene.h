@@ -24,13 +24,20 @@ public:
     void draw();
     
     Attractor attractive;
+    
+    float spawnRate = 1;
+    
+    void flashRandom();
+    void addSpecial();
 private:
     
     ofxParticleManager pBoss;
+    ofLight light1;
     
     ofxColourTheory colorMaker;
     vector<ofColor> pallette;
     
+    ofColor specialColor;
 };
 
 

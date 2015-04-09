@@ -110,8 +110,8 @@ public:
     deque<ofPoint> previousLocations;
 private:
     ofPolyline theLine;
-    int length= ofRandom(10,100);
-    int width = ofRandom(2,6);
+    int length= ofRandom(20,300);
+    int width = ofRandom(6,18);
     
     ofMesh mesh;
 
@@ -149,6 +149,13 @@ public:
     void setup();
     void update();
     void draw();
+    
+    int spawnEveryXFrames =5;
+    
+    inline void setSeparate(float amt){flock.setSeparate(amt);};
+    inline void setCohesion(float amt){flock.setCohesion(amt);};
+    inline void setAlign(float amt){flock.setAlign(amt);};
+    inline void setDrift(float freq, float amt){flock.setDrift(freq, amt);};
 private:
     
     RibbonFlocking flock;

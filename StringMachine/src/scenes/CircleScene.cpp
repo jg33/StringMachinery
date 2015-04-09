@@ -17,18 +17,15 @@ void CircleScene::setup(){
         
     }
     
-    circles[0].setPosition(50, ofGetHeight()/2, 0);
-    circles[1].setPosition(100, ofGetHeight()/2, 0);
-    circles[2].setPosition(250, ofGetHeight()/2, 0);
-    circles[3].setPosition(450, ofGetHeight()/2, 0);
-    circles[4].setPosition(650, ofGetHeight()/2, 0);
+    circles[0].setPosition(50, 50, 0);
+    circles[1].setPosition(100, 100, 0);
+
     
     for (int i = 0; i<circles.size(); i++){
         circles[i].setSize(10);
     }
     
     cout<<"setup circles!"<<endl;
-    finishedEntering();
     
 }
 
@@ -54,6 +51,8 @@ void CircleScene::draw(){
     if(ofGetLightingEnabled()) ofDisableLighting();
 
     ofBackground(0);
+    ofSetColor(255);
+    ofFill();
     for (int i=0; i<circles.size(); i++) {
         circles[i].draw();
     }

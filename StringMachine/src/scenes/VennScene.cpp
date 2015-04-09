@@ -11,23 +11,24 @@
 void VennScene::setup(){
     ofDisableLighting();
     ofDisableAlphaBlending();
-    left = VennCircle(LEFT);
-    right = VennCircle(RIGHT);
+    circles.push_back(VennCircle(LEFT) );
+    circles.push_back(VennCircle(RIGHT) );
     
 }
 
 void VennScene::update(){
-    left.update();
-    right.update();
+    for(int i=0;i<circles.size();i++){
+        circles[i].update();
+    }
     
-    
-    left.setDisplace(sin(ofGetElapsedTimef())*100);
-    right.setDisplace(sin(ofGetElapsedTimef())*100);
-
+    /*
+    left.setDisplace(leftDisplace);
+    right.setDisplace(rightDisplace);
+     */
     
     rotation+= rotationSpeed;
     
-    calcOverlap(left, right);
+    calcOverlap(circles[0] , circles[1]);
     
     
 }
@@ -39,8 +40,9 @@ void VennScene::draw(){
     
     overlapShape.draw();
 
-    left.draw();
-    right.draw();
+    for(int i=0;i<circles.size();i++){
+        circles[i].draw();
+    }
     
     //testMesh.draw();
     
@@ -83,7 +85,8 @@ void VennScene::calcOverlap(VennCircle a, VennCircle b){
     }
     
     vector<ofPoint> hull;
-    hull = getConvexHull(overlappingPoints);
+    
+    if (overlappingPoints.size()>1) hull = getConvexHull(overlappingPoints);
     
     overlapShape.clear();
     overlapShape.setColor(ofColor(255,0,0));
@@ -91,7 +94,7 @@ void VennScene::calcOverlap(VennCircle a, VennCircle b){
         //int pickedIndex = ofMap( ofNoise(i*0.75),0,1,0,overlappingPoints.size());
         overlapShape.curveTo(hull[i]);
     }
-    overlapShape.curveTo(hull[0]);
+    if(hull.size()>0 ) overlapShape.curveTo(hull[0]);
     
     
 }
@@ -204,7 +207,7 @@ void VennCircle::update(){
             
 
         ofVec3f noiseVec = ofVec3f( ofSignedNoise(i+ofGetElapsedTimef()), ofSignedNoise(i+ofGetElapsedTimef()*1.2098), ofSignedNoise(i+ofGetElapsedTimef()*1.45033) );
-        noiseVec *= 30;
+        noiseVec *= wiggle;
         currentPoints[i]= basePoints[i] + noiseVec;
         
     }

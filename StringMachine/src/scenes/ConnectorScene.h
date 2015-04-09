@@ -14,6 +14,7 @@
 #include "ofxSvg.h"
 #include "SingleStringScene.h"
 
+#define MAXSPREAD 25
 
 class Connection{
 public:
@@ -49,6 +50,7 @@ public:
             }
             
         }
+        drawnLine = baseLine;
         
         
         /*
@@ -65,6 +67,16 @@ public:
 
     
     }
+    
+    
+    void spreadZ(float amt){
+        for (int i=0;i<drawnLine.getVertices().size();i++){
+            
+            drawnLine.getVertices()[i].z = baseLine.getVertices()[i].z * ofMap(amt, 0, 1, 1, randSpread);;
+        }
+        
+    }
+    
     void draw(){
         
         ofPushStyle();
@@ -83,12 +95,14 @@ public:
             baseLine.draw();
             
         }*/
-        baseLine.draw();
+        drawnLine.draw();
         ofPopStyle();
     };
     
 private:
     float reach;
+    
+    float randSpread = ofRandom(1,5);
     
 };
 
@@ -99,7 +113,8 @@ class ConnectionPoint: public ofVec3f{
         ConnectionPoint(ofVec3f v ){
             x = v.x;
             y=  v.y;
-            z=  v.z;
+            baseZ=  ofRandom(-10,10);
+            z= baseZ;
             stringy.setup(ofRandom(10,30));
             
         };
@@ -109,6 +124,11 @@ class ConnectionPoint: public ofVec3f{
         vector<ConnectionPoint * > neighbors;
         inline void update(){stringy.update();}
         inline void draw(){stringy.draw();};
+        inline void setTwist(float _twist){ stringy.twist= _twist;};
+        inline void setFilling(bool _fill){ stringy.isFilling = _fill;};
+    
+        inline void spreadZ(float amt){z = baseZ*ofMap(amt, 0, 1, 1, MAXSPREAD);};
+        float baseZ;
     
     private:
         vector<ConnectionPoint> * others;
@@ -123,6 +143,8 @@ class ConnectionPoint: public ofVec3f{
         }
     
     LittleString stringy;
+    
+    
 
 };
 
@@ -141,6 +163,19 @@ public:
     void startGrowth();
     void growMore();
     
+    inline void pushIn(float amt){
+        cam.setPosition(ofGetWidth()/2, ofGetHeight()/2, ofMap(amt, 0, 1, 300, 0)   ) ;
+        for(int i =0;i<newPoints.size();i++){
+            newPoints[i].spreadZ(amt);
+            
+        }
+        for(int i =0;i<connections.size();i++){
+            connections[i].spreadZ(amt);
+            
+        }
+    
+    };
+    
 private:
     int connectionDistance =200;
     int maxLineWidth = 10;
@@ -151,6 +186,8 @@ private:
     
     ofxSVG image;
     vector<ConnectionPoint> newPoints;
+    
+    ofEasyCam cam;
     
     
 };

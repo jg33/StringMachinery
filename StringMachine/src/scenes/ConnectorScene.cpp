@@ -13,6 +13,7 @@ void ConnectorScene::setup(){
     
     image.load("blah.svg");
     connections.clear();
+    newPoints.clear();
     
     for(int i=1 ;i < image.getNumPath() ; i++){
         vector<ofPolyline> pathPolys;
@@ -21,6 +22,7 @@ void ConnectorScene::setup(){
             ConnectionPoint newPoint = ConnectionPoint( thisPoly.getCentroid2D());
             //cout<< newPoint<< endl;
             newPoints.push_back(newPoint);
+            newPoints[newPoints.size()-1].setFilling(true);
         }
         
     }
@@ -29,6 +31,9 @@ void ConnectorScene::setup(){
         newPoints[i].setOthers(&newPoints);
         
     }
+    
+    //cam.disableMouseInput();
+    
     
     
     /*
@@ -54,6 +59,8 @@ void ConnectorScene::setup(){
 
 void ConnectorScene::update(){
     
+    //pushIn(sin(ofGetFrameNum()*0.01)   );
+    
     for (int i=0; i<newPoints.size(); i++){
 
         newPoints[i].update();
@@ -72,24 +79,35 @@ void ConnectorScene::update(){
 
 
 void ConnectorScene::draw(){
+    
+    //cam.begin();
     ofBackground(0);
     ofSetColor(255);
-    
+    ofDisableDepthTest();
     
     for (int i=0; i<connections.size(); i++) {
         connections[i].draw();
     }
+    
     for (int i=0; i<newPoints.size();i++){
         ofPushMatrix();
         ofTranslate(newPoints[i]);
-        
-        newPoints[i].rotateString(25);
+        ofSeedRandom(i);
+        //newPoints[i].rotateString(25);
+        ofRotateY(ofRandom(0.2,1.5)*ofGetFrameNum());
+        ofSeedRandom(i+5);
+        ofRotateX(ofRandom(0.2,1.5)*ofGetFrameNum());
+        newPoints[i].setTwist( sin((i*300)+ ofGetFrameNum() *0.01)*10 );
         newPoints[i].draw();
+        ofSeedRandom();
 
         ofPopMatrix();
         
     }
     
+    ofEnableDepthTest();
+    
+    //cam.end();
     
 }
 
@@ -100,9 +118,11 @@ void ConnectorScene::startGrowth(){
     newPoints[rando].isActive= true;
     
     connections.push_back(Connection());
-    connections.at(connections.size()-1).start = newPoints[rando];
-    ofVec3f target = * newPoints[rando].neighbors[ofRandom(newPoints[rando].neighbors.size())];
-    connections.at(connections.size()-1).end = target ;
+    connections.at(connections.size()-1).start = ofVec3f(newPoints[rando].x, newPoints[rando].y, newPoints[rando].baseZ);
+    ConnectionPoint target = * newPoints[rando].neighbors[ofRandom(newPoints[rando].neighbors.size())];
+    ofVec3f targetVec = ofVec3f(target.x, target.y, target.baseZ);
+    
+    connections.at(connections.size()-1).end = targetVec ;
     
         
 }

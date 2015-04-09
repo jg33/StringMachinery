@@ -21,10 +21,9 @@ class Circle : public ofNode {
         //void inline setPosition(float x, float y, float z){ pos = ofVec3f(x,y,z);};
     
 private:
-    ofColor color;
     float size;
-    
-    ofVec3f pos;
+    ofColor color;
+    //ofVec3f pos;
     
 };
 

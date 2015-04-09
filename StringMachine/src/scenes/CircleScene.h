@@ -9,7 +9,7 @@
 #ifndef __StringMachine__CircleScene__
 #define __StringMachine__CircleScene__
 
-#define NUMCIRCLES 5
+#define NUMCIRCLES 2
 
 #include <stdio.h>
 #include "ofMain.h"
@@ -26,6 +26,7 @@ public:
     void draw();
     
     void setSizes(vector<float>);
+    inline void setSize(int i, float amp ){circles[i].setSize(amp);};
     
     
 private:

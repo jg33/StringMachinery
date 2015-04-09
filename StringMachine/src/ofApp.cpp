@@ -31,7 +31,7 @@ void ofApp::setup(){
     
     ////CONTROL PANEL//////
     addTransformControls();
-    setDrawControlPanel(true);
+    setDrawControlPanel(false);
     setDrawFramerate(true);
 
     controlPanel.addPanel("Extras", 1);
@@ -64,7 +64,7 @@ void ofApp::setup(){
     }
 
     for(int i =0; i<NUM_MICS;i++){
-        micInputs.push_back(0);
+        micInputs.push_back(10);
     }
 }
 
@@ -76,24 +76,40 @@ void ofApp::update(){
         oscIn.getNextMessage(&msg);
         vector<string> address = ofSplitString(msg.getAddress(),"/");
 
-        if(address[1] == "mic"){
-            micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
+        if(address[1] == "lineWiggle"){
+            //micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
             lineChase->setLineDisp(ofToInt(address[2]), msg.getArgAsFloat(0));
             
-        } else if ( address[1] == "dancer"){
-            dancers[ofToInt(address[2])] = ofVec3f(msg.getArgAsFloat(0),msg.getArgAsFloat(1),msg.getArgAsFloat(2));
-        } else if (address[1] == "POI" && address[3] == "pos"){
-            POIs[ofFromString<int>(address[2])] = ofVec3f(msg.getArgAsFloat(0), msg.getArgAsFloat(1), msg.getArgAsFloat(2));
+        } else if (address[1] == "scene"){
+            sceneManager.gotoScene(msg.getArgAsInt32(0));
             
-        } else if(address[1] == "POI" && address[3] == "power"){
-            POIpower[ofFromString<int>(address[2])] = msg.getArgAsFloat(0);
+        } else if (address[1] == "fragmentBonk"){
+            fragments->fireRandom();
+            
+        } else if (address[1] == "venn" && address[3] == "displace"){
+            venn->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) ) ;
+
+            
+        }else if (address[1] == "venn" && address[3] == "wiggle"){
+            venn->leftDisplace = msg.getArgAsFloat(0);
+            
+            
+        } else if (address[1] == "venn" && address[3] == "size"){
+            venn->leftDisplace = msg.getArgAsFloat(0);
+            
+            
+        } else if (address[1] == "vennWiggle"){
+            
+        } else if (address[1] == "drum" && address[3] == "amp"){
+            circles->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) );
+        } else if (address[1] == "drum" && address[3] == "bonk"){
+            //circles->bonk(ofToInt(address[2]) );
         }
         
     }
     
     
     
-    circles->setSizes(micInputs);
     //connections->setPoints(&POIs);
     ofSetWindowTitle(sceneManager.getCurrentSceneName()+" @ "+ ofToString(ofGetFrameRate()));
 }
@@ -104,10 +120,18 @@ void ofApp::draw(){
     ofPopStyle();
     
     
-    //drawControlPanel();
     //drawFramerate(10, 10);
     
     syphonServe.publishScreen();
+    
+    if(bDebug){
+        ofFill();
+        ofSetColor(255);
+        ofSetLineWidth(2);
+        ofDisableLighting();
+        drawControlPanel();
+    }
+
 }
 
 void ofApp::onGuiEvent(guiCallbackData & d){

@@ -22,11 +22,11 @@ public:
     void update();
     void draw();
     float radius = 50;
-    bool isFilling = true;
-    
+    bool isFilling = false;
+    float twist;
+
 private:
     float rotation;
-    float twist;
     
     int numPoints = 15;
     int seed;

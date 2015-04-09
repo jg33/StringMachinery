@@ -50,9 +50,11 @@ void LittleString::update(){
 
 void LittleString::draw(){
     if(isFilling){
-        ofBeginShape();
-        ofSetColor(50);
+        ofSetColor(0,255);
+
         ofFill();
+        ofSetPolyMode(OF_POLY_WINDING_NONZERO);
+        ofBeginShape();
         
         for( int i = 0; i < line.getVertices().size(); i++) {
             ofVertex(line.getVertices().at(i).x, line.getVertices().at(i).y);

@@ -20,8 +20,9 @@ void BoidScene::update(){
     flock.updateRibbons();
 
     
-    if(ofGetFrameNum()%5==0 && flock.boids.size()<100){
+    if(ofGetFrameNum()%spawnEveryXFrames==0 && flock.boids.size()<100){
         flock.addRibbon();
+        //flock.boids[flock.boids.size()-1];
     }
     
 }
@@ -33,8 +34,8 @@ void BoidScene::draw(){
     
     
     for(int i=0;i<flock.boids.size();i++){
-        flock.boids[i].maxspeed = 1000;
-        flock.boids[i].maxforce = 0.1;
+       flock.boids[i].maxspeed = 1000;
+       flock.boids[i].maxforce = 1;
         flock.boids[i].draw();
         
     }

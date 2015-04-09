@@ -27,6 +27,7 @@ public:
     
     void attractToward(ofVec3f attractor, float force);
     
+    
 protected:
     float size, maxSize;
     int seed;

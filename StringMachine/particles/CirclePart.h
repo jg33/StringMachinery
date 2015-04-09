@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "Particle.h"
 
-class CirclePart:public Particle{
+class CirclePart: public Particle{
 public:
     CirclePart():Particle(){color = ofRandom(255);setup();};
     CirclePart(ofColor _color){color = _color;setup();};
@@ -23,6 +23,7 @@ public:
     
     ofColor color;
     
+   
     
 };
 

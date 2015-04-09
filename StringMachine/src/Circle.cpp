@@ -16,8 +16,8 @@ Circle::Circle():ofNode(){
 
 void Circle::customDraw(){
     ofSetColor(color);
-    ofSetCircleResolution(size*2);
-    ofCircle(pos, size);
+    ofSetCircleResolution(size*10);
+    ofDrawCircle(getPosition(), size);
     
     
 }

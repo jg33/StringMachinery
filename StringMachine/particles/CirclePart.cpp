@@ -23,17 +23,20 @@ void CirclePart::setup(){
 void CirclePart::customUpdate(){
     
     acc = ofVec3f(ofSignedNoise(seed+ofGetElapsedTimeMillis()*0.00009), ofSignedNoise(600+seed+ofGetElapsedTimeMillis()*0.00003), ofSignedNoise(132+seed+ofGetElapsedTimeMillis()*0.00007)  ) ;
+    acc *= 0.1;
 
 }
 
 void CirclePart::draw(){
     ofPushStyle();
-    if (getAge() > (lifespan*0.9) || getAge()==0){
-        ofSetColor( ofClamp(ofMap(getAge(),lifespan*0.9,lifespan,255,0),0,255) ) ;
-    }else{
-        ofSetColor(color);
+    ofFill();
+    
+    if(getAgeN() < 0.1){
+        ofSetColor( color, ofClamp( ofMap(getAgeN(),0,0.1, 0,255) ,0,255) ) ;
+    } else{
+        ofSetColor( color, ofClamp( ofMap(getAgeN(),0.1,1, 255,0) ,0,255) ) ;
     }
-    ofCircle(pos, size) ;
+    ofDrawCircle(pos, size) ;
     ofPopStyle();
 }
 
