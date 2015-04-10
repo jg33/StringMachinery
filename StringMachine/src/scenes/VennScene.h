@@ -15,7 +15,8 @@
 
 enum vennSide{
     LEFT,
-    RIGHT
+    RIGHT,
+    TOP
 };
 
 class VennCircle{
@@ -33,22 +34,25 @@ public:
     inline void setLoc(ofVec2f v){loc=v;};
     inline void setDisplace(float d){displacement = d;};
     inline float getRadius(){return radius;};
-    inline void setWiggle(float amt){};
+    inline void setWiggle(float amt){wiggleFreq = amt;};
     
 private:
     vennSide side;
     
     
     ofVec2f loc;
-    float radius = 150;
-    float displacement = 100;
+    float radius = ofRandom(150,300);
+    float displacement = 0.25;
     
     int circleResolution = 15;
     
     vector<ofVec3f> basePoints, currentPoints;
-    float wiggle =30;
+    float wiggleAmp = ofRandom(20,30);
+    float wiggleFreq = ofRandom(0.5,2);
     
     ofPolyline line;
+    
+    int seed = ofRandom(10000);
     
 };
 
@@ -83,6 +87,8 @@ private:
     ofMesh testMesh;
     
     void calcOverlap(VennCircle a, VennCircle b);
+    void calcOverlap(VennCircle a, VennCircle b, VennCircle c);
+
     
     float rotation;
     float rotationSpeed = 1;

@@ -33,7 +33,7 @@ private:
     
     ofxParticleManager pBoss;
     ofLight light1;
-    
+    ofMaterial mat;
     ofxColourTheory colorMaker;
     vector<ofColor> pallette;
     

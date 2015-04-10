@@ -21,7 +21,10 @@ public:
     void customUpdate();
     void draw();
     
-    ofColor color;
+    bool bIsSpecial = false;
+    
+    float prevAge;
+    //ofColor color;
     
    
     

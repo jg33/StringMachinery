@@ -18,6 +18,7 @@ class VennScene;
 class NoteSendScene;
 class SingleStringScene;
 class WaveScene;
+class ParticleScene;
 class PulseScene;
 
 class ofApp : public ofxApp{
@@ -55,6 +56,7 @@ private:
     SingleStringScene * single;
     WaveScene * waves;
     PulseScene * pulse;
+    ParticleScene * particles;
     
     vector<float> micInputs;
     map<int,ofVec3f> dancers;

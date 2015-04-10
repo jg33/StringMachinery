@@ -9,23 +9,23 @@ void ofApp::setup(){
     
     circles = (CircleScene*) sceneManager.add(new CircleScene());
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
-    sceneManager.add(new ParticleScene());
+    particles = (ParticleScene*) sceneManager.add(new ParticleScene());
     rice = (RiceScene*)sceneManager.add(new RiceScene());
     fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphonServe));
     lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphonServe));
     venn = (VennScene*)sceneManager.add(new VennScene(&syphonServe));
     noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphonServe));
     single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
-    waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
+    //waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
     sceneManager.add(new BoidScene(&syphonServe));
-    sceneManager.add(new AmoebaScene(&syphonServe));
+    //sceneManager.add(new AmoebaScene(&syphonServe));
     pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphonServe));
 
     
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
-    sceneManager.gotoScene("Amoeba", true);
+    sceneManager.gotoScene("Particles", true);
 
 
     
@@ -33,7 +33,8 @@ void ofApp::setup(){
     addTransformControls();
     setDrawControlPanel(false);
     setDrawFramerate(true);
-
+    
+    
     controlPanel.addPanel("Extras", 1);
     controlPanel.setWhichPanel("Extras");
     controlPanel.addSlider2D("POI0", "POI0", ofGetWidth()/2, ofGetHeight()/2, 0, ofGetWidth(), 0, ofGetHeight(), false);
@@ -58,11 +59,12 @@ void ofApp::setup(){
     //connections->setPoints(&POIs);
     //connections->setPointPower(&POIpower);
     
+    /*
     for(int i=0;i<50;i++){
         POIs[i] = ofVec3f(ofRandom(ofGetWidth()),ofRandom(ofGetHeight()));
         POIpower[i] = ofRandom(1);
     }
-
+     */
     for(int i =0; i<NUM_MICS;i++){
         micInputs.push_back(10);
     }
@@ -91,19 +93,21 @@ void ofApp::update(){
 
             
         }else if (address[1] == "venn" && address[3] == "wiggle"){
-            venn->leftDisplace = msg.getArgAsFloat(0);
+            venn->setWiggle(ofToInt(address[2]), msg.getArgAsFloat(0)) ;
             
             
         } else if (address[1] == "venn" && address[3] == "size"){
-            venn->leftDisplace = msg.getArgAsFloat(0);
+            venn->setSize(ofToInt(address[2]), msg.getArgAsFloat(0)) ;
             
-            
-        } else if (address[1] == "vennWiggle"){
             
         } else if (address[1] == "drum" && address[3] == "amp"){
             circles->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) );
         } else if (address[1] == "drum" && address[3] == "bonk"){
             //circles->bonk(ofToInt(address[2]) );
+        } else if (address[1] == "swellAmp"){
+            pulse->setMaxBrightness(msg.getArgAsFloat(0));
+        } else if (address[1] == "particles" && address[2] == "bonk"){
+            particles->flashRandom();
         }
         
     }

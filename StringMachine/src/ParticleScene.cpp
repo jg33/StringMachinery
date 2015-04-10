@@ -16,21 +16,28 @@ void ParticleScene::setup(){
     finishedEntering();
     
     ofColor primaryColor = ofColor::red;
-    pallette = colorMaker.createColoursFromStrategy(primaryColor, CT_ANALOGOUS);
+    //pallette = colorMaker.createColoursFromStrategy(primaryColor, CT_ANALOGOUS);
     pallette.push_back(primaryColor);
     
     light1.setup();
     light1.setPointLight();
-    light1.setPosition(ofGetWidth()/2, ofGetHeight()/2, -100);
-    light1.setDiffuseColor(ofColor(255));
-    light1.setAttenuation();
+    light1.setPosition(ofGetWidth()/2, ofGetHeight(), 0);
+    light1.setDiffuseColor(ofColor(255.f));
+    light1.setSpecularColor(ofColor(255.f));
+    light1.enable();
+    light1.setAttenuation(100,100,100);
     
+    mat.setShininess(150);
+    mat.setDiffuseColor(ofColor::blue);
+    mat.setSpecularColor(primaryColor);
+
     specialColor = ofColor(255);
+    
     
 }
 
 void ParticleScene::update(){
-    
+
     ofSeedRandom();
     ofColor thisColor = pallette.at(floor(ofRandom(pallette.size())));
     if(spawnRate<=1){
@@ -54,8 +61,13 @@ void ParticleScene::draw(){
     ofBackground(0);
     if(!ofGetLightingEnabled()) ofEnableLighting();
     if (!light1.getIsEnabled()) light1.enable();
-    pBoss.draw();
     
+    //ofDisableLighting();
+    
+    //light1.draw();
+    mat.begin();
+    pBoss.draw();
+    mat.end();
 
 }
 
@@ -69,5 +81,6 @@ void ParticleScene::flashRandom(){
     pBoss.getParticlesPtr()->at(idToFlash)->setAge(0) ;
     pBoss.getParticlesPtr()->at(idToFlash)->setColor(255) ;
 
+    cout<< idToFlash<< endl;
     
 }

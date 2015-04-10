@@ -13,6 +13,7 @@ void VennScene::setup(){
     ofDisableAlphaBlending();
     circles.push_back(VennCircle(LEFT) );
     circles.push_back(VennCircle(RIGHT) );
+    circles.push_back(VennCircle(TOP) );
     
 }
 
@@ -28,7 +29,7 @@ void VennScene::update(){
     
     rotation+= rotationSpeed;
     
-    calcOverlap(circles[0] , circles[1]);
+    calcOverlap(circles[0] , circles[1], circles[2]);
     
     
 }
@@ -86,7 +87,7 @@ void VennScene::calcOverlap(VennCircle a, VennCircle b){
     
     vector<ofPoint> hull;
     
-    if (overlappingPoints.size()>1) hull = getConvexHull(overlappingPoints);
+    if (overlappingPoints.size()>2) hull = getConvexHull(overlappingPoints);
     
     overlapShape.clear();
     overlapShape.setColor(ofColor(255,0,0));
@@ -99,6 +100,72 @@ void VennScene::calcOverlap(VennCircle a, VennCircle b){
     
 }
 
+
+
+void VennScene::calcOverlap(VennCircle a, VennCircle b, VennCircle c){
+    
+    vector<ofVec3f> aPoints = a.getPoints();
+    vector<ofVec3f> bPoints = b.getPoints();
+    vector<ofVec3f> cPoints = c.getPoints();
+
+    
+    vector<ofVec3f> overlappingPoints;
+    
+    
+    overlappingPoints.clear();
+    testMesh.clear();
+    for(int i = 0; i< aPoints.size(); i++){
+        
+        ofVec3f adjustedPoint = aPoints[i];
+        adjustedPoint += a.getLoc();
+        
+        if (adjustedPoint.distance(b.getLoc()) < b.getRadius()  && adjustedPoint.distance(c.getLoc()) < c.getRadius()){
+            overlappingPoints.push_back(adjustedPoint);
+            
+            
+        }
+        
+    }
+    for(int i = 0; i< bPoints.size(); i++){
+        
+        ofVec3f adjustedPoint = bPoints[i];
+        adjustedPoint += b.getLoc();
+        
+        if (adjustedPoint.distance(a.getLoc()) < a.getRadius() && adjustedPoint.distance(c.getLoc()) < c.getRadius()){
+            overlappingPoints.push_back(adjustedPoint);
+            
+            
+        }
+        
+    }
+    
+    for(int i = 0; i< cPoints.size(); i++){
+        
+        ofVec3f adjustedPoint = cPoints[i];
+        adjustedPoint += c.getLoc();
+        
+        if (adjustedPoint.distance(a.getLoc()) < a.getRadius() && adjustedPoint.distance(b.getLoc()) < b.getRadius()){
+            overlappingPoints.push_back(adjustedPoint);
+            
+            
+        }
+        
+    }
+    
+    vector<ofPoint> hull;
+    
+    if (overlappingPoints.size()>2) hull = getConvexHull(overlappingPoints);
+    
+    overlapShape.clear();
+    overlapShape.setColor(ofColor(255,0,0));
+    for (int i=0;i<hull.size();i++){
+        //int pickedIndex = ofMap( ofNoise(i*0.75),0,1,0,overlappingPoints.size());
+        overlapShape.curveTo(hull[i]);
+    }
+    if(hull.size()>0 ) overlapShape.curveTo(hull[0]);
+    
+    
+}
 
 /// Convex Hull Calculation ///
 bool lexicalComparison(const ofPoint& v1, const ofPoint& v2) {
@@ -184,19 +251,30 @@ VennCircle::VennCircle(vennSide _side){
 void VennCircle::update(){
     //loc = ofVec2f(ofGetWidth()/2,ofGetHeight()/2);
     loc = ofVec2f();
+    ofVec2f displaceVec;
+    ofVec2f center = ofVec2f(0,0);
     
     switch (side) {
         case LEFT:
-            loc.x -= abs(displacement);
+            //loc.x -= abs(displacement);
+            displaceVec = ofVec2f(-500,-500);
             break;
             
         case RIGHT:
-            loc.x+= abs(displacement);
+            //loc.x+= abs(displacement);
+            displaceVec = ofVec2f(500,-500);
+
             break;
             
+        case TOP:
+            displaceVec = ofVec2f(0, 500);
+
+            break;
         default:
             break;
     }
+    
+    loc = center.getInterpolated(displaceVec, displacement);
     
     
     for(int i =0;i<circleResolution;i++){
@@ -206,8 +284,8 @@ void VennCircle::update(){
         basePoints [i] =ofVec3f(x,y);
             
 
-        ofVec3f noiseVec = ofVec3f( ofSignedNoise(i+ofGetElapsedTimef()), ofSignedNoise(i+ofGetElapsedTimef()*1.2098), ofSignedNoise(i+ofGetElapsedTimef()*1.45033) );
-        noiseVec *= wiggle;
+        ofVec3f noiseVec = ofVec3f( ofSignedNoise(seed+i+ofGetElapsedTimef() *wiggleFreq ), ofSignedNoise(seed+i+ofGetElapsedTimef()*1.2098*wiggleFreq), ofSignedNoise(seed+i+ofGetElapsedTimef()*1.45033*wiggleFreq) );
+        noiseVec *= wiggleAmp;
         currentPoints[i]= basePoints[i] + noiseVec;
         
     }
