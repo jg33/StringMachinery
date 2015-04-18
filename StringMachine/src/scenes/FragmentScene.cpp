@@ -11,7 +11,7 @@
 
 void FragmentScene::setup(){
     ofDisableLighting();
-    image.load("wackTest.svg");
+    image.load("apr12_map_v3.svg");
     fragments.clear();
     for(int i=0;i<image.getNumPath();i++){
         fragments.push_back(Fragment(image.getPathAt(i)));
@@ -30,6 +30,8 @@ void FragmentScene::update(){
 
 void FragmentScene::draw(){
     ofBackground(0);
+    
+    ofSetLineWidth(0);
     for(int i=0;i<fragments.size();i++){
         fragments[i].draw();
         

@@ -11,7 +11,7 @@
 void ConnectorScene::setup(){
     ofDisableLighting();
     
-    image.load("blah.svg");
+    image.load("apr12_map_v3.svg");
     connections.clear();
     newPoints.clear();
     

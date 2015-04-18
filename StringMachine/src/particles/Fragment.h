@@ -47,6 +47,8 @@ private:
     float basePulseSpeed;
     //ofxTimer timer;
     
+    float counter;
+    
 };
 
 

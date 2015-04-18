@@ -149,6 +149,7 @@
 		886405AB19E46CBE00408336 /* simpleFileLister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864058E19E46CBE00408336 /* simpleFileLister.cpp */; };
 		886405AC19E46CBE00408336 /* simpleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864059019E46CBE00408336 /* simpleLogger.cpp */; };
 		886405B019E4781300408336 /* ParticleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886405AE19E4781300408336 /* ParticleScene.cpp */; };
+		8870D19C1AE239A700A23484 /* FlickerScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8870D19A1AE239A700A23484 /* FlickerScreen.cpp */; };
 		887A95FF1A8190300023FAC9 /* BoidScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A95FD1A8190300023FAC9 /* BoidScene.cpp */; };
 		887A960D1A81C4AD0023FAC9 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A96091A81C4AD0023FAC9 /* Boid.cpp */; };
 		887A960E1A81C4AD0023FAC9 /* ofxFlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */; };
@@ -159,6 +160,7 @@
 		888268111A0C209400C172FF /* svgtiny.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680A1A0C209400C172FF /* svgtiny.cpp */; };
 		888268121A0C209400C172FF /* svgtiny_gradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680C1A0C209400C172FF /* svgtiny_gradient.cpp */; };
 		888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680E1A0C209400C172FF /* svgtiny_list.cpp */; };
+		888641A71ADB94A1004AC887 /* RingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888641A51ADB94A1004AC887 /* RingScene.cpp */; };
 		888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680EF19E6170200A9FB4B /* CircleScene.cpp */; };
 		888680F619E6175F00A9FB4B /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680F419E6175F00A9FB4B /* Circle.cpp */; };
 		88872D961A26D15E006D42DA /* SingleStringScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D941A26D15E006D42DA /* SingleStringScene.cpp */; };
@@ -588,6 +590,8 @@
 		8864059119E46CBE00408336 /* simpleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleLogger.h; sourceTree = "<group>"; };
 		886405AE19E4781300408336 /* ParticleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleScene.cpp; sourceTree = "<group>"; };
 		886405AF19E4781300408336 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
+		8870D19A1AE239A700A23484 /* FlickerScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlickerScreen.cpp; path = scenes/FlickerScreen.cpp; sourceTree = "<group>"; };
+		8870D19B1AE239A700A23484 /* FlickerScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickerScreen.h; path = scenes/FlickerScreen.h; sourceTree = "<group>"; };
 		887A95FD1A8190300023FAC9 /* BoidScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoidScene.cpp; path = scenes/BoidScene.cpp; sourceTree = "<group>"; };
 		887A95FE1A8190300023FAC9 /* BoidScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoidScene.h; path = scenes/BoidScene.h; sourceTree = "<group>"; };
 		887A96091A81C4AD0023FAC9 /* Boid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
@@ -606,6 +610,8 @@
 		8882680C1A0C209400C172FF /* svgtiny_gradient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = svgtiny_gradient.cpp; sourceTree = "<group>"; };
 		8882680D1A0C209400C172FF /* svgtiny_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = svgtiny_internal.h; sourceTree = "<group>"; };
 		8882680E1A0C209400C172FF /* svgtiny_list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = svgtiny_list.cpp; sourceTree = "<group>"; };
+		888641A51ADB94A1004AC887 /* RingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RingScene.cpp; path = scenes/RingScene.cpp; sourceTree = "<group>"; };
+		888641A61ADB94A1004AC887 /* RingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RingScene.h; path = scenes/RingScene.h; sourceTree = "<group>"; };
 		888680EF19E6170200A9FB4B /* CircleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircleScene.cpp; path = scenes/CircleScene.cpp; sourceTree = "<group>"; };
 		888680F019E6170200A9FB4B /* CircleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleScene.h; path = scenes/CircleScene.h; sourceTree = "<group>"; };
 		888680F319E6171F00A9FB4B /* Scenes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scenes.h; path = scenes/Scenes.h; sourceTree = "<group>"; };
@@ -1464,6 +1470,11 @@
 		888680F219E6170B00A9FB4B /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				888680F319E6171F00A9FB4B /* Scenes.h */,
+				8870D19A1AE239A700A23484 /* FlickerScreen.cpp */,
+				8870D19B1AE239A700A23484 /* FlickerScreen.h */,
+				888641A51ADB94A1004AC887 /* RingScene.cpp */,
+				888641A61ADB94A1004AC887 /* RingScene.h */,
 				88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */,
 				88E76B101A13403A0090E1F6 /* LineChaseScene.h */,
 				886405AE19E4781300408336 /* ParticleScene.cpp */,
@@ -1476,7 +1487,6 @@
 				8893BB331A266EE30012A28C /* NoteSendScene.h */,
 				888680EF19E6170200A9FB4B /* CircleScene.cpp */,
 				888680F019E6170200A9FB4B /* CircleScene.h */,
-				888680F319E6171F00A9FB4B /* Scenes.h */,
 				88A8559F19ED9184005AF18C /* RiceScene.cpp */,
 				88A855A019ED9184005AF18C /* RiceScene.h */,
 				888267FB1A0B30AC00C172FF /* FragmentScene.cpp */,
@@ -1841,6 +1851,7 @@
 				8864049419E4671B00408336 /* ofxRParticlePlexusRenderer.cpp in Sources */,
 				8864049B19E4671B00408336 /* ofxSwarmBehavior.cpp in Sources */,
 				886405AA19E46CBE00408336 /* simpleColor.cpp in Sources */,
+				8870D19C1AE239A700A23484 /* FlickerScreen.cpp in Sources */,
 				888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */,
 				8864049219E4671B00408336 /* ofxRParticleGlowieRenderer.cpp in Sources */,
 				8864054F19E46CAE00408336 /* ofxApp.cpp in Sources */,
@@ -1898,6 +1909,7 @@
 				888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */,
 				8864059819E46CBE00408336 /* guiTypeButtonSlider.cpp in Sources */,
 				93640C223A2F5BEAD6DA2E35 /* Compression.cpp in Sources */,
+				888641A71ADB94A1004AC887 /* RingScene.cpp in Sources */,
 				8864048C19E4671B00408336 /* ofxForceBehavior.cpp in Sources */,
 				8864051519E4672100408336 /* ofxUIMultiImageToggle.cpp in Sources */,
 				8864052919E4672100408336 /* ofxUIWidgetWithLabel.cpp in Sources */,

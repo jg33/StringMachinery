@@ -24,9 +24,11 @@ void Fragment::setup(){
 }
 
 void Fragment::update(){
+    counter += pulseSpeed;
+    //counter *= 1;
     
     if (isPulseMode) {
-        brightness = ofMap(sinf(seed+ofGetElapsedTimef()*pulseSpeed), -1, 1, 0, maxBrightness);
+        brightness = ofMap(sinf((counter+seed)*0.1), -1, 1, 0, maxBrightness);
     } else {
         brightness-=decay;
         if(brightness<0) brightness = 0;
@@ -46,6 +48,8 @@ void Fragment::draw(){
     //ofSetColor(255);
     //ofDrawRectangle(loc, 50, 50);
     ofPushStyle();
+    ofSetLineWidth(0);
+
     shape.draw();
     ofPopStyle();
 

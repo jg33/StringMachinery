@@ -22,5 +22,8 @@
 #include "BoidScene.h"
 #include "AmoebaScene.h"
 #include "PulseScene.h"
+#include "RingScene.h"
+#include "FlickerScreen.h"
+
 
 #endif

@@ -6,6 +6,8 @@ void ofApp::setup(){
     oscIn.setup(6666);
     ofSetVerticalSync(true);
     ofSetSmoothLighting(true);
+    ofEnableAlphaBlending();
+    ofSetBackgroundAuto(false);
     
     circles = (CircleScene*) sceneManager.add(new CircleScene());
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
@@ -20,13 +22,13 @@ void ofApp::setup(){
     sceneManager.add(new BoidScene(&syphonServe));
     //sceneManager.add(new AmoebaScene(&syphonServe));
     pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphonServe));
-
+    rings = (RingScene*) sceneManager.add(new RingScene(&syphonServe));
+    flicker = (FlickerScreen*) sceneManager.add(new FlickerScreen(&syphonServe));
     
     sceneManager.setup(true);
     ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
     sceneManager.gotoScene("Particles", true);
-
 
     
     ////CONTROL PANEL//////
@@ -108,6 +110,8 @@ void ofApp::update(){
             pulse->setMaxBrightness(msg.getArgAsFloat(0));
         } else if (address[1] == "particles" && address[2] == "bonk"){
             particles->flashRandom();
+        } else if (address[1] == "flicker"){
+            flicker->brightness = ofToFloat(address[0]);
         }
         
     }
@@ -169,6 +173,9 @@ void ofApp::keyPressed(int key){
             break;
             case 'g':
             connections->startGrowth();
+            break;
+            case 'r':
+            rings->bonkRing(ofRandom(30));
             break;
 
     }

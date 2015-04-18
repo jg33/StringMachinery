@@ -16,7 +16,7 @@
 
 class Ribbon: public Boid{
     
-public:
+public: 
     Ribbon(): Boid(){};
     /*
     explicit operator Boid() {
@@ -28,9 +28,18 @@ public:
         return converted;
     };
      */
+    void setup(){
+        
+        vel = ofVec3f(ofRandomf(), ofRandomf(),ofRandomf());
+        vel *= 5;
+        
+        //bIsSetup = true;
     
+    }
     
     void updateRibbon(){
+        
+        //if (vel.length()<=3) setup();
         
         if(loc.distance(previousLocations[0])>1){
             previousLocations.push_front(loc);
@@ -101,8 +110,8 @@ public:
         
         
         //end the shape
-        mesh.draw();
-        
+        //mesh.draw();
+        ofDrawCircle(loc, 1);
         //theLine.draw();
 
     };
@@ -111,29 +120,35 @@ public:
 private:
     ofPolyline theLine;
     int length= ofRandom(20,300);
-    int width = ofRandom(6,18);
+    int width = ofRandom(6,10);
     
     ofMesh mesh;
 
+    //bool bIsSetup = false;
     
 };
 
 class RibbonFlocking: public ofxFlocking{
 public:
     RibbonFlocking():ofxFlocking(){};
-    vector<Ribbon> boids;
+    //vector<Ribbon> ribbons;
     
     void addRibbon(){
         boids.push_back(Ribbon());
+        //boids.push_back(Boid());
     }
     void updateRibbons(){
+        /*
         vector<Boid> converted;
         for(int i=0;i<boids.size();i++){
             converted.push_back(boids[i]);
         }
+         */
         for(int i=0;i<boids.size();i++){
-            boids[i].update(converted);
-            boids[i].updateRibbon();
+            boids[i].update(boids);
+
+            //boids[i].update(converted);
+            //boids[i].updateRibbon();
         }
     }
 private:
@@ -150,7 +165,7 @@ public:
     void update();
     void draw();
     
-    int spawnEveryXFrames =5;
+    int spawnEveryXFrames =1;
     
     inline void setSeparate(float amt){flock.setSeparate(amt);};
     inline void setCohesion(float amt){flock.setCohesion(amt);};
@@ -160,8 +175,11 @@ private:
     
     RibbonFlocking flock;
     
+    float eraseAlpha;
+    
     ofxSyphonServer * syphon;
     
+    ofMesh flockMesh;
 };
 
 

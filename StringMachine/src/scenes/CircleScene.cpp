@@ -18,7 +18,7 @@ void CircleScene::setup(){
     }
     
     circles[0].setPosition(50, 50, 0);
-    circles[1].setPosition(100, 100, 0);
+    circles[1].setPosition(ofGetWidth()/4, ofGetHeight()/4, 0);
 
     
     for (int i = 0; i<circles.size(); i++){

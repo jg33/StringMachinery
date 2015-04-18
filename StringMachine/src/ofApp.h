@@ -20,6 +20,8 @@ class SingleStringScene;
 class WaveScene;
 class ParticleScene;
 class PulseScene;
+class RingScene;
+class FlickerScreen;
 
 class ofApp : public ofxApp{
 
@@ -57,6 +59,8 @@ private:
     WaveScene * waves;
     PulseScene * pulse;
     ParticleScene * particles;
+    RingScene * rings;
+    FlickerScreen * flicker;
     
     vector<float> micInputs;
     map<int,ofVec3f> dancers;
