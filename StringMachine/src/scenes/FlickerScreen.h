@@ -24,7 +24,8 @@ public:
     void update();
     void draw();
     
-    float brightness;
+    inline void setBright(float amt){brightness=amt;};
+    float brightness=0;
     
 private:
     ofxSyphonServer * syphon;

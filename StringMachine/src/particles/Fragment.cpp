@@ -33,7 +33,7 @@ void Fragment::update(){
         brightness-=decay;
         if(brightness<0) brightness = 0;
     }
-    float scale = ofMap(brightness, 0, maxBrightness, 0, 1);
+    float scale = ofMap(brightness, 0.0001, maxBrightness, 0, 1);
     
     //shape.close();
     shape.setFillColor(brightness);

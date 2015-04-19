@@ -24,6 +24,6 @@
 #include "PulseScene.h"
 #include "RingScene.h"
 #include "FlickerScreen.h"
-
+#include "WaveFormScene.h"
 
 #endif

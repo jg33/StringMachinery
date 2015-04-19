@@ -150,6 +150,7 @@
 		886405AC19E46CBE00408336 /* simpleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864059019E46CBE00408336 /* simpleLogger.cpp */; };
 		886405B019E4781300408336 /* ParticleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886405AE19E4781300408336 /* ParticleScene.cpp */; };
 		8870D19C1AE239A700A23484 /* FlickerScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8870D19A1AE239A700A23484 /* FlickerScreen.cpp */; };
+		8870D19F1AE2F9D100A23484 /* WaveFormScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */; };
 		887A95FF1A8190300023FAC9 /* BoidScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A95FD1A8190300023FAC9 /* BoidScene.cpp */; };
 		887A960D1A81C4AD0023FAC9 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A96091A81C4AD0023FAC9 /* Boid.cpp */; };
 		887A960E1A81C4AD0023FAC9 /* ofxFlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */; };
@@ -592,6 +593,8 @@
 		886405AF19E4781300408336 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
 		8870D19A1AE239A700A23484 /* FlickerScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlickerScreen.cpp; path = scenes/FlickerScreen.cpp; sourceTree = "<group>"; };
 		8870D19B1AE239A700A23484 /* FlickerScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickerScreen.h; path = scenes/FlickerScreen.h; sourceTree = "<group>"; };
+		8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaveFormScene.cpp; path = scenes/WaveFormScene.cpp; sourceTree = "<group>"; };
+		8870D19E1AE2F9D100A23484 /* WaveFormScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveFormScene.h; path = scenes/WaveFormScene.h; sourceTree = "<group>"; };
 		887A95FD1A8190300023FAC9 /* BoidScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoidScene.cpp; path = scenes/BoidScene.cpp; sourceTree = "<group>"; };
 		887A95FE1A8190300023FAC9 /* BoidScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoidScene.h; path = scenes/BoidScene.h; sourceTree = "<group>"; };
 		887A96091A81C4AD0023FAC9 /* Boid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
@@ -1471,6 +1474,8 @@
 			isa = PBXGroup;
 			children = (
 				888680F319E6171F00A9FB4B /* Scenes.h */,
+				8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */,
+				8870D19E1AE2F9D100A23484 /* WaveFormScene.h */,
 				8870D19A1AE239A700A23484 /* FlickerScreen.cpp */,
 				8870D19B1AE239A700A23484 /* FlickerScreen.h */,
 				888641A51ADB94A1004AC887 /* RingScene.cpp */,
@@ -2029,6 +2034,7 @@
 				8864051119E4672100408336 /* ofxUILabelToggle.cpp in Sources */,
 				886405A219E46CBE00408336 /* guiTypeText.cpp in Sources */,
 				8864048B19E4671B00408336 /* ofxFieldEffectorBehavior.cpp in Sources */,
+				8870D19F1AE2F9D100A23484 /* WaveFormScene.cpp in Sources */,
 				8864051C19E4672100408336 /* ofxUISlider.cpp in Sources */,
 				8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */,
 				8864051219E4672100408336 /* ofxUIMinimalSlider.cpp in Sources */,

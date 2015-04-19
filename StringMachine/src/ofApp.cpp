@@ -4,10 +4,11 @@
 void ofApp::setup(){
     syphonServe.setName("String Machine");
     oscIn.setup(6666);
-    ofSetVerticalSync(true);
+    ofSetVerticalSync(false);
     ofSetSmoothLighting(true);
     ofEnableAlphaBlending();
     ofSetBackgroundAuto(false);
+    ofSetFrameRate(50);
     
     circles = (CircleScene*) sceneManager.add(new CircleScene());
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
@@ -24,11 +25,12 @@ void ofApp::setup(){
     pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphonServe));
     rings = (RingScene*) sceneManager.add(new RingScene(&syphonServe));
     flicker = (FlickerScreen*) sceneManager.add(new FlickerScreen(&syphonServe));
+    waveform = (WaveFormScene*) sceneManager.add(new WaveFormScene(&syphonServe));
     
     sceneManager.setup(true);
-    ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
+    //ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
     setSceneManager(&sceneManager);
-    sceneManager.gotoScene("Particles", true);
+    sceneManager.gotoScene("WaveForm", true);
 
     
     ////CONTROL PANEL//////
@@ -111,6 +113,17 @@ void ofApp::update(){
         } else if (address[1] == "particles" && address[2] == "bonk"){
             particles->flashRandom();
         } else if (address[1] == "flicker"){
+            flicker->setBright(msg.getArgAsFloat(0));
+            //cout<<"flick"<<endl;
+        } else if (address[1] == "waveAmp"){
+            switch (ofToInt(address[2])) {
+                case 1:
+                    waveform->amp1 = msg.getArgAsFloat(0);
+                    break;
+                    
+                default:
+                    break;
+            }
             flicker->brightness = ofToFloat(address[0]);
         }
         

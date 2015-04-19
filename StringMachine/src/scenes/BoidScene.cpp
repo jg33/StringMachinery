@@ -22,16 +22,16 @@ void BoidScene::setup(){
 
 void BoidScene::update(){
     
-    flock.setCohesion(1.3);
+    flock.setCohesion(0.7);
     flock.setAlign(1.9);
-    flock.setSeparate(1.2);
-
+    flock.setSeparate(5);
+    flock.setDrift(1, 2);
     
     flock.update();
     //flock.updateRibbons();
 
     
-    if(ofGetFrameNum()%spawnEveryXFrames==0 && flock.boids.size()<450){
+    if(ofGetFrameNum()%spawnEveryXFrames==0 && flock.boids.size()<250){
         flock.addRibbon();
         //flock.boids[flock.boids.size()-1];
     }
@@ -49,6 +49,8 @@ void BoidScene::update(){
     for(int i=0;i<flock.boids.size();i++){
         flock.boids[i].maxforce = 0.2;
             flock.boids[i].maxspeed = 10;
+        
+        flock.boids[i].seek(ofVec3f(ofGetMouseX(),ofGetMouseY(),0));
         //flock.boids[i]
     }
     
@@ -56,12 +58,13 @@ void BoidScene::update(){
 
 void BoidScene::draw(){
     ofEnableAlphaBlending();
-    //ofBackground(0, eraseAlpha);
-    ofSetColor(0, eraseAlpha);
+    ofBackground(0, eraseAlpha);
+    //ofSetColor(0, eraseAlpha);
+    //ofEnableLighting();
     
     
-    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-    ofSetColor(255) ;
+    //ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+    ofSetColor(255,255) ;
     
     
     glPointSize(5);
@@ -69,9 +72,9 @@ void BoidScene::draw(){
     glBegin(GL_POINTS);
     
     for(int i=0; i<flock.boids.size();i++){
-        float brightness = ofMap(flock.boids[i].age,0,flock.boids[i].life,255,0);
-
-        glColor3b(brightness, brightness, brightness);
+        float brightness = ofMap(flock.boids[i].age,0,flock.boids[i].life,1,0.);
+        //float brightness = 1.0;
+        glColor3f(brightness, brightness, brightness);
         glVertex3f(flock.boids[i].loc.x,flock.boids[i].loc.y,flock.boids[i].loc.z);
         
     }
@@ -90,4 +93,9 @@ void BoidScene::draw(){
      */
     syphon->publishScreen();
     
+}
+
+void BoidScene::exit(){
+    
+    flock = RibbonFlocking();
 }

@@ -24,5 +24,6 @@ void FlickerScreen::update(){
 void FlickerScreen::draw(){
     
     ofBackground(brightness);
-    
+    ofSetColor(brightness*255);
+    ofRect(0,0,ofGetWidth(),ofGetHeight());
 }

@@ -165,6 +165,8 @@ public:
     void update();
     void draw();
     
+    void exit();
+    
     int spawnEveryXFrames =1;
     
     inline void setSeparate(float amt){flock.setSeparate(amt);};
@@ -180,6 +182,8 @@ private:
     ofxSyphonServer * syphon;
     
     ofMesh flockMesh;
+    ofLight light;
+    ofMaterial mat;
 };
 
 

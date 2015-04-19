@@ -12,6 +12,8 @@ void NoteSendScene::setup(){
     ofEnableLighting();
     ofEnableAlphaBlending();
     
+    
+    
     light1.setup();
     light1.setPointLight();
     light1.setPosition(ofGetWidth()/2, ofGetHeight()/2, -100);
@@ -65,8 +67,8 @@ void NotePart::customUpdate(){
         
     }
     
-    material.setDiffuseColor(ofColor(255,ofMap(age, 0, lifespan, 255,0)));
-    material.setSpecularColor(ofColor(255,ofMap(age, 0, lifespan, 255,0)));
+    material.setDiffuseColor(ofColor(255,ofMap(age, 0.00001, lifespan, 255,0)));
+    material.setSpecularColor(ofColor(255,ofMap(age, 0.00001, lifespan, 255,0)));
 
 }
 
@@ -75,7 +77,7 @@ void NotePart::draw(){
     ofPushMatrix();
     ofTranslate(pos);
     ofRotate(rotation, rotationAxis.x, rotationAxis.y, rotationAxis.z);
-    ofSetColor(255, ofMap(age, 0, lifespan, 255,0));
+    ofSetColor(255, ofMap(age, 0.00001, lifespan, 255,0));
     ofDrawBox(0,0,0, 3,size,3);
     ofPopMatrix();
     material.end();
