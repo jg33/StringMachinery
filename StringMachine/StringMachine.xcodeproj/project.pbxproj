@@ -150,7 +150,6 @@
 		886405AC19E46CBE00408336 /* simpleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8864059019E46CBE00408336 /* simpleLogger.cpp */; };
 		886405B019E4781300408336 /* ParticleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886405AE19E4781300408336 /* ParticleScene.cpp */; };
 		8870D19C1AE239A700A23484 /* FlickerScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8870D19A1AE239A700A23484 /* FlickerScreen.cpp */; };
-		8870D19F1AE2F9D100A23484 /* WaveFormScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */; };
 		887A95FF1A8190300023FAC9 /* BoidScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A95FD1A8190300023FAC9 /* BoidScene.cpp */; };
 		887A960D1A81C4AD0023FAC9 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A96091A81C4AD0023FAC9 /* Boid.cpp */; };
 		887A960E1A81C4AD0023FAC9 /* ofxFlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 887A960B1A81C4AD0023FAC9 /* ofxFlocking.cpp */; };
@@ -161,22 +160,19 @@
 		888268111A0C209400C172FF /* svgtiny.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680A1A0C209400C172FF /* svgtiny.cpp */; };
 		888268121A0C209400C172FF /* svgtiny_gradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680C1A0C209400C172FF /* svgtiny_gradient.cpp */; };
 		888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8882680E1A0C209400C172FF /* svgtiny_list.cpp */; };
-		888641A71ADB94A1004AC887 /* RingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888641A51ADB94A1004AC887 /* RingScene.cpp */; };
-		888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680EF19E6170200A9FB4B /* CircleScene.cpp */; };
 		888680F619E6175F00A9FB4B /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888680F419E6175F00A9FB4B /* Circle.cpp */; };
 		88872D961A26D15E006D42DA /* SingleStringScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D941A26D15E006D42DA /* SingleStringScene.cpp */; };
 		88872D991A26E3D3006D42DA /* WaveScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88872D971A26E3D3006D42DA /* WaveScene.cpp */; };
-		8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8893BB321A266EE30012A28C /* NoteSendScene.cpp */; };
 		88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A3AAA919E66B60001FD7AE /* Particle.cpp */; };
 		88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559C19ED8FA0005AF18C /* Rice.cpp */; };
 		88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559F19ED9184005AF18C /* RiceScene.cpp */; };
-		88B8EF101ACA4E91009F8FE1 /* AmoebaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */; };
 		88C372FD19EC5CDF00FBDED8 /* ConnectorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */; };
-		88D76BA419E8A0DC00D870B0 /* CirclePart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88D76BA219E8A0DC00D870B0 /* CirclePart.cpp */; };
-		88D76BA819E8A3AB00D870B0 /* Attractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88D76BA619E8A3AB00D870B0 /* Attractor.cpp */; };
 		88E76B111A13403A0090E1F6 /* LineChaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */; };
 		88E76B141A13418D0090E1F6 /* LineChaser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B121A13418D0090E1F6 /* LineChaser.cpp */; };
 		88E76B3C1A134F3F0090E1F6 /* VennScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B3A1A134F3F0090E1F6 /* VennScene.cpp */; };
+		88EE36951AE4D045005E0EF1 /* BigDrums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88EE36931AE4D045005E0EF1 /* BigDrums.cpp */; };
+		88EE36981AE4DC70005E0EF1 /* WavesOfGrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88EE36961AE4DC70005E0EF1 /* WavesOfGrain.cpp */; };
+		88F4A6CA1AE46AAC0082F9CB /* CirclePart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88F4A6C81AE46AAC0082F9CB /* CirclePart.cpp */; };
 		899BAF53175868463FE1B029 /* RecursiveDirectoryIteratorStategies.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F27637AABA89A235C5974D56 /* RecursiveDirectoryIteratorStategies.cpp */; };
 		8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32D6F27DC6308427F9A278C1 /* ofxSyphonServer.mm */; };
 		8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */; };
@@ -593,8 +589,6 @@
 		886405AF19E4781300408336 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
 		8870D19A1AE239A700A23484 /* FlickerScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlickerScreen.cpp; path = scenes/FlickerScreen.cpp; sourceTree = "<group>"; };
 		8870D19B1AE239A700A23484 /* FlickerScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickerScreen.h; path = scenes/FlickerScreen.h; sourceTree = "<group>"; };
-		8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaveFormScene.cpp; path = scenes/WaveFormScene.cpp; sourceTree = "<group>"; };
-		8870D19E1AE2F9D100A23484 /* WaveFormScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveFormScene.h; path = scenes/WaveFormScene.h; sourceTree = "<group>"; };
 		887A95FD1A8190300023FAC9 /* BoidScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoidScene.cpp; path = scenes/BoidScene.cpp; sourceTree = "<group>"; };
 		887A95FE1A8190300023FAC9 /* BoidScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoidScene.h; path = scenes/BoidScene.h; sourceTree = "<group>"; };
 		887A96091A81C4AD0023FAC9 /* Boid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
@@ -613,10 +607,6 @@
 		8882680C1A0C209400C172FF /* svgtiny_gradient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = svgtiny_gradient.cpp; sourceTree = "<group>"; };
 		8882680D1A0C209400C172FF /* svgtiny_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = svgtiny_internal.h; sourceTree = "<group>"; };
 		8882680E1A0C209400C172FF /* svgtiny_list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = svgtiny_list.cpp; sourceTree = "<group>"; };
-		888641A51ADB94A1004AC887 /* RingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RingScene.cpp; path = scenes/RingScene.cpp; sourceTree = "<group>"; };
-		888641A61ADB94A1004AC887 /* RingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RingScene.h; path = scenes/RingScene.h; sourceTree = "<group>"; };
-		888680EF19E6170200A9FB4B /* CircleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircleScene.cpp; path = scenes/CircleScene.cpp; sourceTree = "<group>"; };
-		888680F019E6170200A9FB4B /* CircleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleScene.h; path = scenes/CircleScene.h; sourceTree = "<group>"; };
 		888680F319E6171F00A9FB4B /* Scenes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scenes.h; path = scenes/Scenes.h; sourceTree = "<group>"; };
 		888680F419E6175F00A9FB4B /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
 		888680F519E6175F00A9FB4B /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
@@ -624,28 +614,26 @@
 		88872D951A26D15E006D42DA /* SingleStringScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleStringScene.h; path = scenes/SingleStringScene.h; sourceTree = "<group>"; };
 		88872D971A26E3D3006D42DA /* WaveScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaveScene.cpp; path = scenes/WaveScene.cpp; sourceTree = "<group>"; };
 		88872D981A26E3D3006D42DA /* WaveScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveScene.h; path = scenes/WaveScene.h; sourceTree = "<group>"; };
-		8893BB321A266EE30012A28C /* NoteSendScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NoteSendScene.cpp; path = scenes/NoteSendScene.cpp; sourceTree = "<group>"; };
-		8893BB331A266EE30012A28C /* NoteSendScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteSendScene.h; path = scenes/NoteSendScene.h; sourceTree = "<group>"; };
 		88A3AAA919E66B60001FD7AE /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		88A3AAAA19E66B60001FD7AE /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		88A8559C19ED8FA0005AF18C /* Rice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rice.cpp; sourceTree = "<group>"; };
 		88A8559D19ED8FA0005AF18C /* Rice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rice.h; sourceTree = "<group>"; };
 		88A8559F19ED9184005AF18C /* RiceScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RiceScene.cpp; sourceTree = "<group>"; };
 		88A855A019ED9184005AF18C /* RiceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiceScene.h; sourceTree = "<group>"; };
-		88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmoebaScene.cpp; path = scenes/AmoebaScene.cpp; sourceTree = "<group>"; };
-		88B8EF0F1ACA4E91009F8FE1 /* AmoebaScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmoebaScene.h; path = scenes/AmoebaScene.h; sourceTree = "<group>"; };
 		88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnectorScene.cpp; path = scenes/ConnectorScene.cpp; sourceTree = "<group>"; };
 		88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectorScene.h; path = scenes/ConnectorScene.h; sourceTree = "<group>"; };
-		88D76BA219E8A0DC00D870B0 /* CirclePart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CirclePart.cpp; path = ../particles/CirclePart.cpp; sourceTree = "<group>"; };
-		88D76BA319E8A0DC00D870B0 /* CirclePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CirclePart.h; path = ../particles/CirclePart.h; sourceTree = "<group>"; };
-		88D76BA619E8A3AB00D870B0 /* Attractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Attractor.cpp; sourceTree = "<group>"; };
-		88D76BA719E8A3AB00D870B0 /* Attractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attractor.h; sourceTree = "<group>"; };
 		88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineChaseScene.cpp; path = scenes/LineChaseScene.cpp; sourceTree = "<group>"; };
 		88E76B101A13403A0090E1F6 /* LineChaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChaseScene.h; path = scenes/LineChaseScene.h; sourceTree = "<group>"; };
 		88E76B121A13418D0090E1F6 /* LineChaser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineChaser.cpp; path = particles/LineChaser.cpp; sourceTree = "<group>"; };
 		88E76B131A13418D0090E1F6 /* LineChaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChaser.h; path = particles/LineChaser.h; sourceTree = "<group>"; };
 		88E76B3A1A134F3F0090E1F6 /* VennScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VennScene.cpp; path = scenes/VennScene.cpp; sourceTree = "<group>"; };
 		88E76B3B1A134F3F0090E1F6 /* VennScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VennScene.h; path = scenes/VennScene.h; sourceTree = "<group>"; };
+		88EE36931AE4D045005E0EF1 /* BigDrums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BigDrums.cpp; path = scenes/BigDrums.cpp; sourceTree = "<group>"; };
+		88EE36941AE4D045005E0EF1 /* BigDrums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BigDrums.h; path = scenes/BigDrums.h; sourceTree = "<group>"; };
+		88EE36961AE4DC70005E0EF1 /* WavesOfGrain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WavesOfGrain.cpp; path = scenes/WavesOfGrain.cpp; sourceTree = "<group>"; };
+		88EE36971AE4DC70005E0EF1 /* WavesOfGrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WavesOfGrain.h; path = scenes/WavesOfGrain.h; sourceTree = "<group>"; };
+		88F4A6C81AE46AAC0082F9CB /* CirclePart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CirclePart.cpp; sourceTree = "<group>"; };
+		88F4A6C91AE46AAC0082F9CB /* CirclePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclePart.h; sourceTree = "<group>"; };
 		89B60FB247E1F64013C716DC /* AbstractTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractTypes.h; path = ../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/AbstractTypes.h; sourceTree = SOURCE_ROOT; };
 		8B30E93FD3D3475EED522A0E /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
 		8C75AFC8774A62495DD53464 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
@@ -1474,12 +1462,8 @@
 			isa = PBXGroup;
 			children = (
 				888680F319E6171F00A9FB4B /* Scenes.h */,
-				8870D19D1AE2F9D100A23484 /* WaveFormScene.cpp */,
-				8870D19E1AE2F9D100A23484 /* WaveFormScene.h */,
 				8870D19A1AE239A700A23484 /* FlickerScreen.cpp */,
 				8870D19B1AE239A700A23484 /* FlickerScreen.h */,
-				888641A51ADB94A1004AC887 /* RingScene.cpp */,
-				888641A61ADB94A1004AC887 /* RingScene.h */,
 				88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */,
 				88E76B101A13403A0090E1F6 /* LineChaseScene.h */,
 				886405AE19E4781300408336 /* ParticleScene.cpp */,
@@ -1488,10 +1472,6 @@
 				88872D951A26D15E006D42DA /* SingleStringScene.h */,
 				88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */,
 				88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */,
-				8893BB321A266EE30012A28C /* NoteSendScene.cpp */,
-				8893BB331A266EE30012A28C /* NoteSendScene.h */,
-				888680EF19E6170200A9FB4B /* CircleScene.cpp */,
-				888680F019E6170200A9FB4B /* CircleScene.h */,
 				88A8559F19ED9184005AF18C /* RiceScene.cpp */,
 				88A855A019ED9184005AF18C /* RiceScene.h */,
 				888267FB1A0B30AC00C172FF /* FragmentScene.cpp */,
@@ -1502,10 +1482,12 @@
 				88872D981A26E3D3006D42DA /* WaveScene.h */,
 				887A95FD1A8190300023FAC9 /* BoidScene.cpp */,
 				887A95FE1A8190300023FAC9 /* BoidScene.h */,
-				88B8EF0E1ACA4E91009F8FE1 /* AmoebaScene.cpp */,
-				88B8EF0F1ACA4E91009F8FE1 /* AmoebaScene.h */,
 				882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */,
 				882FAC4C1ACF3BFF00403F89 /* PulseScene.h */,
+				88EE36931AE4D045005E0EF1 /* BigDrums.cpp */,
+				88EE36941AE4D045005E0EF1 /* BigDrums.h */,
+				88EE36961AE4DC70005E0EF1 /* WavesOfGrain.cpp */,
+				88EE36971AE4DC70005E0EF1 /* WavesOfGrain.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -1513,14 +1495,12 @@
 		88D76BA519E8A0F400D870B0 /* particles */ = {
 			isa = PBXGroup;
 			children = (
+				88F4A6C81AE46AAC0082F9CB /* CirclePart.cpp */,
+				88F4A6C91AE46AAC0082F9CB /* CirclePart.h */,
 				888680F419E6175F00A9FB4B /* Circle.cpp */,
 				888680F519E6175F00A9FB4B /* Circle.h */,
 				88A8559C19ED8FA0005AF18C /* Rice.cpp */,
 				88A8559D19ED8FA0005AF18C /* Rice.h */,
-				88D76BA319E8A0DC00D870B0 /* CirclePart.h */,
-				88D76BA219E8A0DC00D870B0 /* CirclePart.cpp */,
-				88D76BA619E8A3AB00D870B0 /* Attractor.cpp */,
-				88D76BA719E8A3AB00D870B0 /* Attractor.h */,
 				88A3AAA919E66B60001FD7AE /* Particle.cpp */,
 				88A3AAAA19E66B60001FD7AE /* Particle.h */,
 				888267FE1A0B322500C172FF /* Fragment.cpp */,
@@ -1857,13 +1837,11 @@
 				8864049B19E4671B00408336 /* ofxSwarmBehavior.cpp in Sources */,
 				886405AA19E46CBE00408336 /* simpleColor.cpp in Sources */,
 				8870D19C1AE239A700A23484 /* FlickerScreen.cpp in Sources */,
-				888680F119E6170200A9FB4B /* CircleScene.cpp in Sources */,
 				8864049219E4671B00408336 /* ofxRParticleGlowieRenderer.cpp in Sources */,
 				8864054F19E46CAE00408336 /* ofxApp.cpp in Sources */,
 				8864059619E46CBE00408336 /* guiTextBase.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				886404FE19E4672100408336 /* ofxUI2DGraph.cpp in Sources */,
-				88B8EF101ACA4E91009F8FE1 /* AmoebaScene.cpp in Sources */,
 				886405A719E46CBE00408336 /* guiTypeVideo.cpp in Sources */,
 				8864051719E4672100408336 /* ofxUIRadio.cpp in Sources */,
 				886405A619E46CBE00408336 /* guiTypeVairableLister.cpp in Sources */,
@@ -1872,6 +1850,7 @@
 				A86D7323CE1A9450906A91DD /* fft.cpp in Sources */,
 				8864053519E4675900408336 /* tinyxmlerror.cpp in Sources */,
 				8864049D19E4671B00408336 /* ofxVortexBehavior.cpp in Sources */,
+				88F4A6CA1AE46AAC0082F9CB /* CirclePart.cpp in Sources */,
 				8864052319E4672100408336 /* ofxUITextInput.cpp in Sources */,
 				C098DBE008A1B5C6D12ABFFD /* ofxBeat.cpp in Sources */,
 				8864049719E4671B00408336 /* ofxSolver.cpp in Sources */,
@@ -1883,7 +1862,6 @@
 				888268001A0B322500C172FF /* Fragment.cpp in Sources */,
 				8864052119E4672100408336 /* ofxUITabBar.cpp in Sources */,
 				8864050019E4672100408336 /* ofxUIBaseDraws.cpp in Sources */,
-				88D76BA819E8A3AB00D870B0 /* Attractor.cpp in Sources */,
 				8864053319E4675900408336 /* ofxXmlSettings.cpp in Sources */,
 				8864049A19E4671B00408336 /* ofxSpringSystem.cpp in Sources */,
 				8864052419E4672100408336 /* ofxUIToggle.cpp in Sources */,
@@ -1914,7 +1892,6 @@
 				888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */,
 				8864059819E46CBE00408336 /* guiTypeButtonSlider.cpp in Sources */,
 				93640C223A2F5BEAD6DA2E35 /* Compression.cpp in Sources */,
-				888641A71ADB94A1004AC887 /* RingScene.cpp in Sources */,
 				8864048C19E4671B00408336 /* ofxForceBehavior.cpp in Sources */,
 				8864051519E4672100408336 /* ofxUIMultiImageToggle.cpp in Sources */,
 				8864052919E4672100408336 /* ofxUIWidgetWithLabel.cpp in Sources */,
@@ -1969,14 +1946,14 @@
 				8864052019E4672100408336 /* ofxUISuperCanvas.cpp in Sources */,
 				8864050419E4672100408336 /* ofxUICircleSlider.cpp in Sources */,
 				88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */,
-				8893BB341A266EE30012A28C /* NoteSendScene.cpp in Sources */,
 				8864049519E4671B00408336 /* ofxRParticleRenderer.cpp in Sources */,
 				885456081ACA598400BB1D27 /* LightingShader_sources.cpp in Sources */,
+				88EE36951AE4D045005E0EF1 /* BigDrums.cpp in Sources */,
 				886405A519E46CBE00408336 /* guiTypeToggle.cpp in Sources */,
 				8864048E19E4671B00408336 /* ofxLorentzBehavior.cpp in Sources */,
 				88A3AAAB19E66B60001FD7AE /* Particle.cpp in Sources */,
 				8864049819E4671B00408336 /* ofxSphericalAttractionBehavior.cpp in Sources */,
-				88D76BA419E8A0DC00D870B0 /* CirclePart.cpp in Sources */,
+				88EE36981AE4DC70005E0EF1 /* WavesOfGrain.cpp in Sources */,
 				8864052519E4672100408336 /* ofxUIToggleMatrix.cpp in Sources */,
 				8864050C19E4672100408336 /* ofxUIImageSampler.cpp in Sources */,
 				8864055319E46CAE00408336 /* ofxSceneManager.cpp in Sources */,
@@ -2034,7 +2011,6 @@
 				8864051119E4672100408336 /* ofxUILabelToggle.cpp in Sources */,
 				886405A219E46CBE00408336 /* guiTypeText.cpp in Sources */,
 				8864048B19E4671B00408336 /* ofxFieldEffectorBehavior.cpp in Sources */,
-				8870D19F1AE2F9D100A23484 /* WaveFormScene.cpp in Sources */,
 				8864051C19E4672100408336 /* ofxUISlider.cpp in Sources */,
 				8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */,
 				8864051219E4672100408336 /* ofxUIMinimalSlider.cpp in Sources */,

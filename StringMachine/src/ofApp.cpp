@@ -2,7 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    syphonServe.setName("String Machine");
+    syphon1.setName("String Machine 1");
+    syphon2.setName("String Machine 2");
+    syphon3.setName("String Machine 3");
+
+
     oscIn.setup(6666);
     ofSetVerticalSync(false);
     ofSetSmoothLighting(true);
@@ -10,22 +14,25 @@ void ofApp::setup(){
     ofSetBackgroundAuto(false);
     ofSetFrameRate(50);
     
-    circles = (CircleScene*) sceneManager.add(new CircleScene());
+    //circles = (CircleScene*) sceneManager.add(new CircleScene());
     connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
     particles = (ParticleScene*) sceneManager.add(new ParticleScene());
     rice = (RiceScene*)sceneManager.add(new RiceScene());
-    fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphonServe));
-    lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphonServe));
-    venn = (VennScene*)sceneManager.add(new VennScene(&syphonServe));
-    noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphonServe));
-    single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphonServe));
-    //waves = (WaveScene*)sceneManager.add(new WaveScene(&syphonServe));
-    sceneManager.add(new BoidScene(&syphonServe));
-    //sceneManager.add(new AmoebaScene(&syphonServe));
-    pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphonServe));
-    rings = (RingScene*) sceneManager.add(new RingScene(&syphonServe));
-    flicker = (FlickerScreen*) sceneManager.add(new FlickerScreen(&syphonServe));
-    waveform = (WaveFormScene*) sceneManager.add(new WaveFormScene(&syphonServe));
+    fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphon1));
+    lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphon1, &syphon2));
+    venn = (VennScene*)sceneManager.add(new VennScene(&syphon1));
+    //noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphon1));
+    single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphon1));
+    //waves = (WaveScene*)sceneManager.add(new WaveScene(&syphon1));
+    sceneManager.add(new BoidScene(&syphon1));
+    //sceneManager.add(new AmoebaScene(&syphon1));
+    pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphon1));
+    //rings = (RingScene*) sceneManager.add(new RingScene(&syphon1));
+    flicker = (FlickerScreen*) sceneManager.add(new FlickerScreen(&syphon1));
+    //waveform = (WaveFormScene*) sceneManager.add(new WaveFormScene(&syphon1));
+    bigDrums = (BigDrums*) sceneManager.add(new BigDrums(&syphon1, &syphon2, &syphon3));
+    grain = (WavesOfGrain*) sceneManager.add(new WavesOfGrain(&syphon1, &syphon2));
+    
     
     sceneManager.setup(true);
     //ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
@@ -86,9 +93,6 @@ void ofApp::update(){
             //micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
             lineChase->setLineDisp(ofToInt(address[2]), msg.getArgAsFloat(0));
             
-        } else if (address[1] == "scene"){
-            sceneManager.gotoScene(msg.getArgAsInt32(0));
-            
         } else if (address[1] == "fragmentBonk"){
             fragments->fireRandom();
             
@@ -105,9 +109,9 @@ void ofApp::update(){
             
             
         } else if (address[1] == "drum" && address[3] == "amp"){
-            circles->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) );
+            bigDrums->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) );
         } else if (address[1] == "drum" && address[3] == "bonk"){
-            //circles->bonk(ofToInt(address[2]) );
+            bigDrums->bonkRing(msg.getArgAsFloat(0) );
         } else if (address[1] == "swellAmp"){
             pulse->setMaxBrightness(msg.getArgAsFloat(0));
         } else if (address[1] == "particles" && address[2] == "bonk"){
@@ -118,13 +122,58 @@ void ofApp::update(){
         } else if (address[1] == "waveAmp"){
             switch (ofToInt(address[2])) {
                 case 1:
-                    waveform->amp1 = msg.getArgAsFloat(0);
+                    grain->amp1 = msg.getArgAsFloat(0);
                     break;
                     
                 default:
                     break;
             }
             flicker->brightness = ofToFloat(address[0]);
+        } else if(address[1] == "scene"){
+            switch (msg.getArgAsInt32(0)) {
+                case 0:
+                    sceneManager.gotoScene("Flicker");
+
+                    break;
+                case 1:
+                    sceneManager.gotoScene("Pulse");
+
+                    break;
+                    
+                case 2:
+                    sceneManager.gotoScene("Connections");
+                    break;
+                    
+                case 3:
+                    sceneManager.gotoScene("Metal and Wood");
+
+                    break;
+                    
+                case 4:
+                    sceneManager.gotoScene("Venn");
+                    break;
+                    
+                case 5:
+                    sceneManager.gotoScene("Big Drums");
+
+                    break;
+                    
+                case 6:
+                    sceneManager.gotoScene("Waves of Grain");
+
+                    break;
+                    
+                case 7:
+                    sceneManager.gotoScene("Rice");
+
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            
+            
         }
         
     }
@@ -143,7 +192,7 @@ void ofApp::draw(){
     
     //drawFramerate(10, 10);
     
-    syphonServe.publishScreen();
+    //syphon2.publishScreen();
     
     if(bDebug){
         ofFill();
@@ -182,18 +231,22 @@ void ofApp::keyPressed(int key){
             sceneManager.nextScene();
             break;
             case 'm':
-            noteSend->addNote((int)ofRandom(127), (int)ofRandom(127));
+            grain->addNote((int)ofRandom(127), (int)ofRandom(127));
             break;
             case 'g':
             connections->startGrowth();
             break;
             case 'r':
-            rings->bonkRing(ofRandom(30));
+            bigDrums->bonkRing(ofRandom(30));
             break;
 
     }
     if(key == ' '){
         fragments->fireRandom();
+        bigDrums->fireRandom();
+        lineChase->fireRandom();
+
+
     }
 
 }

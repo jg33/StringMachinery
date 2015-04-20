@@ -9,20 +9,22 @@
 
 #define NUM_MICS 4
 
-class CircleScene;
+//class CircleScene;
 class ConnectorScene;
-class RiceScene;
+//class RiceScene;
 class FragmentScene;
 class LineChaseScene;
 class VennScene;
-class NoteSendScene;
+//class NoteSendScene;
 class SingleStringScene;
 class WaveScene;
 class ParticleScene;
 class PulseScene;
 class RingScene;
 class FlickerScreen;
-class WaveFormScene;
+//class WaveFormScene;
+class BigDrums;
+class WavesOfGrain;
 
 class ofApp : public ofxApp{
 
@@ -45,24 +47,29 @@ class ofApp : public ofxApp{
     
 
 private:
-    ofxSyphonServer syphonServe;
+    ofxSyphonServer syphon1;
+    ofxSyphonServer syphon2;
+    ofxSyphonServer syphon3;
+    
     ofxOscReceiver oscIn;
     
     ofxSceneManager sceneManager;
-    CircleScene * circles;
+    //CircleScene * circles;
     ConnectorScene * connections;
     RiceScene * rice;
     FragmentScene * fragments;
     LineChaseScene * lineChase;
     VennScene * venn;
-    NoteSendScene * noteSend;
+    //NoteSendScene * noteSend;
     SingleStringScene * single;
     WaveScene * waves;
     PulseScene * pulse;
     ParticleScene * particles;
-    RingScene * rings;
+    //RingScene * rings;
     FlickerScreen * flicker;
-    WaveFormScene * waveform;
+    //WaveFormScene * waveform;
+    BigDrums * bigDrums;
+    WavesOfGrain * grain;
     
     vector<float> micInputs;
     map<int,ofVec3f> dancers;

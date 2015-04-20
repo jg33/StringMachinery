@@ -11,7 +11,7 @@
 void ParticleScene::setup(){
 
     pBoss = ofxParticleManager();
-    attractive.setup(pBoss.getParticlesPtr());
+    //attractive.setup(pBoss.getParticlesPtr());
     cout<<"setup particles!"<<endl;
     finishedEntering();
     
@@ -52,8 +52,8 @@ void ParticleScene::update(){
     }
     pBoss.update();
     
-    attractive.update();
-    attractive.setPosition(ofGetMouseX(), ofGetMouseY(), 0);
+    //attractive.update();
+    //attractive.setPosition(ofGetMouseX(), ofGetMouseY(), 0);
     
 }
 
