@@ -28,10 +28,20 @@ public:
     
     void setDisplacement(float d);
     
+    void setSpeed(float spd){
+        speedMult = spd;
+        
+    }
+    
+    void setHomeX(float x){
+        
+        homebase.x = x;
+    }
+    
 private:
     float seed;
     
-    float speed;
+    float speed, speedMult = 100;
     float displacement, displaceDecay;
     
     ofVec2f homebase, front;

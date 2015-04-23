@@ -13,6 +13,7 @@
 #include "ofxAppUtils.h"
 #include "ofxSvg.h"
 #include "SingleStringScene.h"
+#include "ofxSyphon.h"
 
 #define MAXSPREAD 25
 
@@ -152,6 +153,7 @@ class ConnectorScene : public ofxScene{
     
 public:
     ConnectorScene():ofxScene("Connections"){setSingleSetup(false);};
+    ConnectorScene(ofxSyphonServer * _syphon):ofxScene("Connections"){syphon = _syphon; setSingleSetup(false);};
     void setup();
     void update();
     void draw();
@@ -162,6 +164,8 @@ public:
     
     void startGrowth();
     void growMore();
+    
+    bool bWillGrow = false;
     
     inline void pushIn(float amt){
         cam.setPosition(ofGetWidth()/2, ofGetHeight()/2, ofMap(amt, 0, 1, 300, 0)   ) ;
@@ -189,6 +193,6 @@ private:
     
     ofEasyCam cam;
     
-    
+    ofxSyphonServer * syphon;
 };
 #endif /* defined(__StringMachine__ConnectorScene__) */

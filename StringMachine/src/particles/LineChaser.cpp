@@ -16,7 +16,7 @@ bool offScreen(ofVec3f v){
 void LineChaser::update(){
     
     speed = ofNoise(ofGetElapsedTimef()+seed);
-    speed*=100;
+    speed*=speedMult;
     front.x = homebase.x+speed;
     
     displacement*= displaceDecay;

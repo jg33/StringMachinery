@@ -22,13 +22,10 @@ void FlickerScreen::update(){
 }
 
 void FlickerScreen::draw(){
-    ofBackground(0) ;
-    ofSetColor(255, 0, 0);
-    ofDrawRectangle(0, 0, 30,30);
-    syphon->publishScreen();
-    
     
     ofBackground(brightness);
     ofSetColor(brightness*255);
-    ofRect(0,0,ofGetWidth(),ofGetHeight());
+    ofDrawRectangle(0,0,ofGetWidth(),ofGetHeight());
+    syphon->publishScreen();
+
 }

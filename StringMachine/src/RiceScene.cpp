@@ -14,8 +14,8 @@ void RiceScene::setup(){
     cout<<"setup rice!"<<endl;
     finishedEntering();
     
-    ofColor primaryColor = ofColor::goldenRod;
-    pallette = colorMaker.createColoursFromStrategy(primaryColor, CT_SPLIT_COMPLEMENTARY);
+    ofColor primaryColor = ofColor::red;
+    pallette = colorMaker.createColoursFromStrategy(primaryColor, CT_ANALOGOUS);
     pallette.push_back(primaryColor);
     
     wind = ofVec3f(0.001,0);
@@ -40,8 +40,11 @@ void RiceScene::update(){
 
 void RiceScene::draw(){
     ofBackground(0);
+    ofSetColor(255);
+    ofFill();
     pBoss.draw();
     
+    syphon->publishScreen();
     
 }
 

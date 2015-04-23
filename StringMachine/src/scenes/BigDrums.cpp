@@ -116,7 +116,10 @@ void BigDrums::fireRandom(){
     
 }
 
-void BigDrums::fireRandom(int size){
+void BigDrums::fireRandom(float size){
     
+    size = ofMap(size,0,1,0,255);
+    fragments[(int)ofRandom(fragments.size())].fire(size);
+
 }
     

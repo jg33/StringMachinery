@@ -15,9 +15,9 @@ void ofApp::setup(){
     ofSetFrameRate(50);
     
     //circles = (CircleScene*) sceneManager.add(new CircleScene());
-    connections = (ConnectorScene*) sceneManager.add(new ConnectorScene());
+    connections = (ConnectorScene*) sceneManager.add(new ConnectorScene(&syphon1));
     particles = (ParticleScene*) sceneManager.add(new ParticleScene());
-    rice = (RiceScene*)sceneManager.add(new RiceScene());
+    rice = (RiceScene*)sceneManager.add(new RiceScene(&syphon1));
     fragments = (FragmentScene*)sceneManager.add(new FragmentScene(&syphon1));
     lineChase = (LineChaseScene*)sceneManager.add(new LineChaseScene(&syphon1, &syphon2));
     venn = (VennScene*)sceneManager.add(new VennScene(&syphon1));
@@ -93,11 +93,26 @@ void ofApp::update(){
             //micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
             lineChase->setLineDisp(ofToInt(address[2]), msg.getArgAsFloat(0));
             
-        } else if (address[1] == "fragmentBonk"){
-            fragments->fireRandom();
+        } else if(address[1] == "lineIntensity"){
+            float speed = ofMap(msg.getArgAsFloat(0), 0, 1, 50, 1000);
+            float home = ofMap(msg.getArgAsFloat(0), 0, 1, 500, 1200);
+            lineChase->setSpeed(speed);
+            lineChase->setHome(home);
+
+        }else if (address[1] == "fragmentBonk"){
+            fragments->fireRandom( msg.getArgAsFloat(0));
+            bigDrums->fireRandom( msg.getArgAsFloat(0));
             
-        } else if (address[1] == "venn" && address[3] == "displace"){
-            venn->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) ) ;
+        } else if( address[1] == "woodBonk"){
+            lineChase->fire( msg.getArgAsFloat(0), msg.getArgAsFloat(1));
+
+            
+        }else if( address[1] == "connectionBonk"){
+            connections->bWillGrow = true;
+            
+            
+        }else if (address[1] == "venn" && address[3] == "displace"){
+            venn->setDisplace(ofToInt(address[2]), msg.getArgAsFloat(0) ) ;
 
             
         }else if (address[1] == "venn" && address[3] == "wiggle"){
@@ -115,14 +130,26 @@ void ofApp::update(){
         } else if (address[1] == "swellAmp"){
             pulse->setMaxBrightness(msg.getArgAsFloat(0));
         } else if (address[1] == "particles" && address[2] == "bonk"){
-            particles->flashRandom();
+            particles->addSpecial();
         } else if (address[1] == "flicker"){
             flicker->setBright(msg.getArgAsFloat(0));
             //cout<<"flick"<<endl;
-        } else if (address[1] == "waveAmp"){
+        } else if (address[1] == "waveNote"){
+            grain->addNote(msg.getArgAsInt32(0) , msg.getArgAsInt32(1));
+            
+        }else if (address[1] == "waveAmp"){
             switch (ofToInt(address[2])) {
-                case 1:
+                    
+                case 0:
                     grain->amp1 = msg.getArgAsFloat(0);
+                    break;
+                    
+                case 1:
+                    grain->amp2 = msg.getArgAsFloat(0);
+                    break;
+                   
+                case 2:
+                    grain->amp3 = msg.getArgAsFloat(0);
                     break;
                     
                 default:
@@ -173,6 +200,9 @@ void ofApp::update(){
             }
             
             
+            
+        } else if (address[1] == "wind"){
+            rice->setWind(ofVec3f(msg.getArgAsFloat(0), msg.getArgAsFloat(1)));
             
         }
         

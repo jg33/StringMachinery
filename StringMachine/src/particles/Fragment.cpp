@@ -18,7 +18,7 @@ void Fragment::setup(){
     shape.setFilled(true);
     
     seed = ofRandom(6666);
-    basePulseSpeed = ofRandom(0.8, 1.2);
+    basePulseSpeed = ofRandom(0.2, 0.7);
     pulseSpeed = basePulseSpeed;
      
 }

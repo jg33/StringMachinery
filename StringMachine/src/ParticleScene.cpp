@@ -39,7 +39,10 @@ void ParticleScene::setup(){
 void ParticleScene::update(){
 
     ofSeedRandom();
+    
     ofColor thisColor = pallette.at(floor(ofRandom(pallette.size())));
+    
+    
     if(spawnRate<=1){
         if(ofRandomf()<spawnRate){
             pBoss.addParticle(new CirclePart(thisColor));
@@ -50,6 +53,9 @@ void ParticleScene::update(){
         }
         
     }
+    
+    
+    
     pBoss.update();
     
     //attractive.update();

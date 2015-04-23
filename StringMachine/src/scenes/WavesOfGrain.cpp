@@ -18,13 +18,13 @@ void WavesOfGrain::setup(){
     cout<<"setup waves of grain!"<<endl;
     
     amp1 = 0.5;
-    scale1 = 250;
+    scale1 = 200;
     
     amp2 = 0.5;
     scale2 = 75;
     
     amp3 = 0.5;
-    scale3 = 550;
+    scale3 = 450;
     
     
     light1.setup();
@@ -104,7 +104,7 @@ NotePart::NotePart(int _note, int _velocity){
     note = _note;
     velocity = _velocity;
     
-    pos = ofVec3f(ofMap(note, 0, 127, 10, ofGetWidth()-10), ofGetHeight()/2);
+    pos = ofVec3f(ofMap(note, 0, 127, ofGetWidth()-10,10), ofGetHeight()/2);
     targetSize = ofMap(velocity, 0, 127, 0, 200);
     
     rotationAxis = ofVec3f(ofRandom(360),ofRandom(360),ofRandom(360)   );

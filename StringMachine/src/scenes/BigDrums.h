@@ -90,11 +90,11 @@ public:
     inline void setSize(int i, float amp ){circles[i].setSize(amp);};
     
     void bonkRing(float vel){
-        rings.push_back( Ring(vel) );
+        rings.push_back( Ring(  ofMap(vel,0.0001,1,0.1,60)   ) );
     };
     
     void fireRandom();
-    void fireRandom(int size);
+    void fireRandom(float size);
 private:
     vector<Circle> circles;
     

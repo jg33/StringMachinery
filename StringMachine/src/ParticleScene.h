@@ -25,7 +25,7 @@ public:
     
     //Attractor attractive;
     
-    float spawnRate = 1;
+    float spawnRate = 0.1;
     
     void flashRandom();
     void addSpecial();

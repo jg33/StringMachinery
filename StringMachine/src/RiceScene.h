@@ -13,11 +13,14 @@
 #include "ofxAppUtils.h"
 #include "Rice.h"
 #include "ofxColourTheory.h"
+#include "ofxSyphon.h"
 
 class RiceScene : public ofxScene{
     
 public:
     RiceScene():ofxScene("Rice"){setSingleSetup(false);};
+    RiceScene(ofxSyphonServer * _syphon):ofxScene("Rice"){syphon = _syphon; setSingleSetup(false);};
+
     void setup();
     void update();
     void draw();
@@ -32,6 +35,8 @@ private:
     vector<ofColor> pallette;
 
     ofVec3f wind;
+    
+    ofxSyphonServer * syphon;
     
 };
 

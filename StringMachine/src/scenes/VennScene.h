@@ -33,6 +33,8 @@ public:
     inline ofVec2f getLoc(){return loc;};
     inline void setLoc(ofVec2f v){loc=v;};
     inline void setDisplace(float d){displacement = d;};
+    inline void setRadius(float r){ radius=r;};
+
     inline float getRadius(){return radius;};
     inline void setWiggle(float amt){wiggleFreq = amt;};
     
@@ -73,7 +75,12 @@ public:
     float leftDisplace=1;
     float rightDisplace=1;
     
-    inline float setSize(int i, float amt){ }
+    inline float setSize(int i, float amt){
+        
+        amt = ofMap(amt, 0.00001,1, 0, 250);
+        circles[i].setRadius(amt);
+    
+    }
     inline void setDisplace(int i, float amt){circles[i].setDisplace(amt);};
     inline void setWiggle(int i, float amt){circles[i].setWiggle(amt);};
     inline void setRotationSpeed(float amt){};

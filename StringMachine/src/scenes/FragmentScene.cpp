@@ -47,7 +47,7 @@ void FragmentScene::fireRandom(){
     
 }
 
-void FragmentScene::fireRandom(int size){
-    
+void FragmentScene::fireRandom(float size){
+    fragments[(int)ofRandom(fragments.size())].fire(size);
     
 }

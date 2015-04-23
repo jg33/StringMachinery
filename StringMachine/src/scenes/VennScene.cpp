@@ -35,6 +35,8 @@ void VennScene::update(){
 }
 
 void VennScene::draw(){
+    
+    if (ofGetLightingEnabled()) ofDisableLighting();
     ofBackground(0);
     ofTranslate(ofGetWidth()/2,ofGetHeight()/2);
     ofRotate (rotation);

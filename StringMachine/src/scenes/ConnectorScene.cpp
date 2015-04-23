@@ -61,6 +61,11 @@ void ConnectorScene::update(){
     
     //pushIn(sin(ofGetFrameNum()*0.01)   );
     
+    if (bWillGrow){
+        startGrowth();
+        bWillGrow = false;
+    }
+    
     for (int i=0; i<newPoints.size(); i++){
 
         newPoints[i].update();
@@ -71,6 +76,8 @@ void ConnectorScene::update(){
     for (int i=0; i<connections.size(); i++) {
         connections[i].update();
     }
+    
+    
     
     
     
@@ -107,6 +114,7 @@ void ConnectorScene::draw(){
     
     ofEnableDepthTest();
     
+    syphon->publishScreen();
     //cam.end();
     
 }

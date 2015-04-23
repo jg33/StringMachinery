@@ -27,7 +27,7 @@ public:
     void draw();
     
     void fireRandom();
-    void fireRandom(int size);
+    void fireRandom(float size);
     
 private:
     vector<Fragment> fragments;
