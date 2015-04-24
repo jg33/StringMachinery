@@ -32,7 +32,7 @@ void ofApp::setup(){
     //waveform = (WaveFormScene*) sceneManager.add(new WaveFormScene(&syphon1));
     bigDrums = (BigDrums*) sceneManager.add(new BigDrums(&syphon1, &syphon2, &syphon3));
     grain = (WavesOfGrain*) sceneManager.add(new WavesOfGrain(&syphon1, &syphon2));
-    
+    chaos = (ChaoticUnison*) sceneManager.add(new ChaoticUnison(&syphon1));
     
     sceneManager.setup(true);
     //ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
@@ -137,7 +137,14 @@ void ofApp::update(){
         } else if (address[1] == "waveNote"){
             grain->addNote(msg.getArgAsInt32(0) , msg.getArgAsInt32(1));
             
-        }else if (address[1] == "waveAmp"){
+        } else if (address[1] == "pulse" && address[2] == "brightness"){
+            pulse->setMaxBrightness(msg.getArgAsFloat(0));
+            
+        } else if (address[1] == "pulse" && address[2] == "speed"){
+            pulse->setSpeed(msg.getArgAsFloat(0));
+            
+        }
+        else if (address[1] == "waveAmp"){
             switch (ofToInt(address[2])) {
                     
                 case 0:
@@ -156,7 +163,10 @@ void ofApp::update(){
                     break;
             }
             flicker->brightness = ofToFloat(address[0]);
-        } else if(address[1] == "scene"){
+        } else if(address[1] == "chaos" ){
+            chaos->pluck(ofToInt(address[2]), msg.getArgAsFloat(0));
+            
+        }else if(address[1] == "scene"){
             switch (msg.getArgAsInt32(0)) {
                 case 0:
                     sceneManager.gotoScene("Flicker");

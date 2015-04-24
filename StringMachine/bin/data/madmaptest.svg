@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="361.244mm" height="270.933mm"
+ viewBox="0 0 1024 768"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
+<title>MadMapper SVG export</title>
+<desc>MadMapper SVG export</desc>
+<defs>
+</defs>
+<g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1024,0 L1024,768 L0,768 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L800,0 L800,600 L0,600 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1024,0 L1024,768 L0,768 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="0" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 100,100 " />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ffffff" stroke-opacity="0.392157" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,512,384)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-512,384 L512,384 L512,-384 L-512,-384 L-512,384"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#c1c1c1" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,463.653,213.514)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-307.064,151.643 L169.85,271.197 L432.347,-213.514 L-65.3584,-104.357 L-307.064,151.643"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<image x="504" y="237" width="46" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAANCAYAAADWgVyvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAA1RJREFUSIntlE1oXFUUx3/n3nmTpGlqCDazSLXgFyiSRlfJMO8NE1BwoRsNFgULERVdiRvBD4apHwul2o1BS6u7uhLxA4wEMrx5IVDwAzeVolHEhU3oIGondb7ucdH7ysuYhQt11bM5795zzv//e5f3LlyN/zdkcB1F0VFgJrP3bqPR+PCfiIVh+DIwDXycJMnJf4kRgLm5uckgCI6LyGIcx3/mssUoil7EQ6vqWRG5DVgslUpb1tozcRz3Aa1WqwagVqtpuVy2QRCMdjqdSeCQl/oSYH5+vgCwurq6mXoUi8UxY8z+kZGRzZWVlRbAwsJCfmtra6Lb7bbW19f/GISOoughVT2sqr1erzcFbOw48TAM3xKR61X1zSRJ6mEY3gc8aoxZcs49CXyWJMnbYRieAvar6mljzMMZCQFURD5yzt0jIvm04Jx7xFpbUNXXM/3PqeoF4DgwIiLinHtnbW3t07ShUqkc6vV6LwGISMda+2y9Xt8wAy/3nc9Ph2H4gYgcFpH3ut3ujyLSBQ54gT0iIsaYGwbm1UMeyEALgDFm0Tn3mt/72edXReSE1zvv+54olUq3pIL1ev0bY8wzItLKGu0AN8acBFaAS0AO2AssWmtvZ5cQEVXVjoi80ul0jgB94Kd+v38MQFXd5aQOsEBXVc81Go2nnHOngF8zcnvTB2vtdNYnjuPvVXUzu5cFF+fcaeCuJEkeHB0dXQASD1hJQT3QngH4K6ehqpLL5ZZ8zWTmpoFARC55uPOq2s36Ay0A59yZ3Q5qV/BqtSoisgUQRdHR7e3tu4HQlw8CQ8BMFEVvpEBZ+AHd9Kf/xGcLXCMiAsyEYXhEVZ8XkcnMzPvAKIAxpjAImnq02+2d4LVazYnIC355B/C4f75YKBTuB5p+fXM6o6pNVQ16vd7vY2NjbVUVLn9mJ3zLvVlzVf3cQzzg8zFgyZcf8/nrOI6/GARX1W1VDYaHhy/C3+9xyuVyzjl3pzFmn6puisi3cRz3AKlUKtP9fj8/NDR0ttVqmampqe1ms3ltet3Nzs5OjI+Pt5aXl9vFYvFGa+3BIAjOtdttm8/ng3q9vhFF0a3OuQkR+SFJkl+8502qep2q/pYkyVeDTHDlytwXx/GF3epX47+OvwCpX2HSJ3hlgwAAAABJRU5ErkJggg==" />
+<image x="504" y="237" width="46" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAANCAYAAADWgVyvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAhVJREFUSIntk82LjmEUxn9nDDPGVzMZ8hEZYyNW00RSMoU/QFIyFmykLIilzWwsLGjKxkIWNjbYiGhsJF8bC41S42NhQfFqmMzUjJ/FHLnn7XlrZqmcejrnvs51zn3d97kfANR56gNn2llmaepQ1lyabc0cem9Qv6pLqpJ3CsGPiviA2qJG8prV+WokvlLdVvD3Jq9L7arbo1PtUTsKbJG6Se1sIHog+46rPVWE4SQcUZvUU7k+nv5y8j7k+pzVdlH9WYetUnfUYX1qtzpaYCfrNO1N/Jc61kj4taLBuNOjOeP0bY6pQ8n7mpybDYTfq8CuF/FwRf5NEW+v09Wr1qqEN6U/DVwFvgMtQDtwAdhVNULgFzAB7AfWAJPAK+BQ5icLXjMwDjyLiM3AGeBT0aujiPvKTSLiBfC2SkCTOg/4AhyNiKXAYuBG5vvTT6VfVtROAbW6fq/TNxec3UArMJrYSB7EP/qKPrerRFYKz+89gHofOAYczPwWoA3Yoz7n74SqLIAFGQ+mnw+syHiPeh64BaxPPsAA0xMG2Dhb4aTg7oq3V1Pb1I8VucH0W9T2jJ+q/ZUvX6/UrQ+rJ+qw+w20Pcz8jENFQWgF9gHLgXfA44iYyKfUBywEHuUt1oB1ETGStWuBbxHxI3+ircCTnEBrRLxQdwKrgZcR8SbreoHNwOeIuNtA+CKgMyLez2ka/+2//eP2G9pEjgeoKP7QAAAAAElFTkSuQmCC" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#c1c1c1" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,298.64,634.081)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="nonzero" d="M-90,60 L0,-120 L90,60 L-90,60"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<image x="277" y="599" width="45" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAANCAYAAAA9tuesAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAA35JREFUSIntlE9oXGUQwH/zvd2N2yQSQpsUU7OL9Q8VjVUQwrLvLYl48OAf1KBYVEixWk96E7EsKepBKXoxaGgVL8WDItaAkWDi7gsLlVpvLUXUxIJugkE0ru3u2/3GQ74XHsGDB+mpc5n5ZubN/N58HwNX5cqIJO0gCI4C+xO+96vV6qf/pZDv+68CI8CpMAyP/1+Avu8fEJEikLLWfrW0tPRRKg4GQXAkBlbVcyJyKzBZLBbXPM87XalUOoCWy2UDMDU1paVSyUun092tVmsAuMOV+hZgfHx8EGBhYWE17lEoFHqNMbuy2ezq/Px8A2BiYiKztrbWH0VRo1arbWwDPigiD8VnEXmiWCxelkTCOyIyrKpvhWG46Pv+A8BBY8y0tfYw8EUYhu/6vn8C2KWqJ40xBxI9BFAR+cxae5+IZOKAtfYpz/MGVfXNRP7Lqvob8DaQFRGx1r63tLQ0m2A6JZvyorW2X0SOAHWTKPK90y/4vv+JiDwuIh9EUfSTiETAHve3O0REjDE3bLtJdYB7EsACYIyZtNa+4XwXnX5dRGZcvbrLe7ZYLN4cFzTGzKjq7MDAwM/AS86dNYmE48A8cAlIAT3ApOd5t/EvIiKqqi0Rea3Vaj0NdICVTqdzDEBV7aZSC3hApKoXqtXq89baE8DviXI9seF53khsVyqVWRH5pl6vfywiaYB2u314C9paexK4NwzDx7q7uyeA0MGNxZAOZsc28MbWqFUllUpNu5hJfDcCpEXkkgOrq2qUnAHQcBynY2cQBLcDR90TOSsiT9ZqtQ0vTsjn8/cAPblcbl8URVngYRfqc5Pfncvl7haRnQ7mInCdiHzd6XQ2PM97ENgQkW4gA3wO3AIY4BoREWD38PBwBnjO5cXyITAKYIw5s7Ky8ku5XDbLy8vxFjovIpettYV8Pt/YmrSIvOLMO4FDzv5rcHDwEWDdnW9KTHVdVdPtdvvP3t7epqoKm09rxqXcn4BCVb90fR51+hgw7cLPOP1dpVI5A5vbSVUVaKrqXmvtfjZv7FByT1MqlVLW2ruMMdeq6qqInK9UKm1AxsbGRjqdTqarq+tco9EwQ0NDf6+vr++MV9ro6Gh/X19fY25urlkoFPZ6npdLp9MXms2ml8lk0ouLiz8EQbDPbYEfwzD81fW8UVWvV9U/wjA8u42nz910UupclSsk/wB2WG076dQSowAAAABJRU5ErkJggg==" />
+<image x="277" y="599" width="45" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAANCAYAAAA9tuesAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAiBJREFUSIntlD1oVFEQhc9kE92oKEZDYhCLEBvRKooiNtkiNmoh2BkLKxFU/C0EbSzs/IM0gmBhoRBEC1FXUoVg0EZQogTXYCFIMFkJCYnK+lm8eTB5vIWtJdPMzJlz5507d3gCCsArltpFNWjAsJ+51eiZBvteAz4BX4Cr2eKzIHYkxEeAlYA5rxloAczxDmB34Pc7rxvoznyjHegF2gK2GtgKtOcIvpEZ4l/gXCSMe+EY0ASc9fyE+0HnffX8Cvl2E1jIYJuAvRmsBPQAswE7lRGd2k7gkMefI+F+IC0CM8AFkinOA8POm3HO4zqiX+RgD0I8nlOfCPGeoOk0MAi0uiaAqSi6DbjH0psDXKojesgbHQa6gD/Ae++D5wA14CHJ9Me8x3nge/jGjxBfzky7n2QtUtuQ1pokTUs6bmZrJa2R9MhrA+5r7teFnjVJ1cwqfnTfHDh9koqSZh2rSFqUhOcW+jwJgkuSXnq9LKnTzKbjjSb9JmV/ljx7E+Ihf4G+MOkPQNXrt+v0uJ6DnQnxQddTCNgo8JRk9Q5E0T05zarAKuBbTu2O++3Aeo/HgIE6Yu9m8qPAyQxWDnpS0fMkq7UA/AYqKSf9nRUl7Ze0UdKkpFEz+wUUJJUktUoakdTiz7nFzCp+drOkn2Y2B/RK2iHptaQVkopm9hbYJ6lL0jszm/BzuyRtkzRlZs/jngGdkjoy61cxszkt27L9h/YPw3vJmDHlBiAAAAAASUVORK5CYII=" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#c1c1c1" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,755.771,517.765)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M223.416,65.666 L224.037,57.7195 L224.305,49.5218 L224.209,41.0858 L223.741,32.4257 L222.89,23.5574 L221.649,14.4986 L220.012,5.2682 L217.972,-4.11323 L215.528,-13.6237 L212.676,-23.2398 L209.418,-32.937 L205.754,-42.6895 L201.688,-52.4707 L197.225,-62.2529 L192.374,-72.008 L187.143,-81.7073 L181.544,-91.3219 L175.59,-100.823 L169.296,-110.181 L162.679,-119.369 L155.758,-128.358 L148.552,-137.121 L141.082,-145.632 L133.372,-153.868 L125.445,-161.803 L117.326,-169.417 L109.038,-176.689 L100.609,-183.601 L92.0635,-190.137 L83.4277,-196.283 L74.7274,-202.025 L65.9881,-207.355 L57.2348,-212.264 L48.492,-216.746 L39.7831,-220.797 L31.131,-224.414 L22.5572,-227.599 L14.0823,-230.353 L5.72569,-232.679 L-2.49459,-234.581 L-10.5618,-236.068 L-18.4604,-237.146 L-26.1766,-237.825 L-33.6974,-238.115 L-41.0117,-238.026 L-48.1093,-237.571 L-54.9817,-236.763 L-61.6212,-235.614 L-68.0216,-234.137 L-74.1778,-232.348 L-80.0859,-230.259 L-85.7426,-227.886 L-91.146,-225.242 L-96.295,-222.342 L-101.189,-219.199 L-105.829,-215.828 L-110.215,-212.243 L-114.349,-208.456 L-118.235,-204.482 L-121.873,-200.332 L-125.268,-196.019 L-128.422,-191.556 L-131.341,-186.953 L-134.028,-182.221 L-136.487,-177.372 L-138.723,-172.416 L-140.741,-167.361 L-142.545,-162.219 L-144.141,-156.997 L-145.533,-151.704 L-146.727,-146.347 L-147.728,-140.936 L-148.539,-135.476 L-149.168,-129.974 L-149.618,-124.438 L-149.894,-118.872 L-150.001,-113.283 L-149.944,-107.676 L-149.727,-102.056 L-149.355,-96.4285 L-148.832,-90.7968 L-148.162,-85.1656 L-147.35,-79.5389 L-146.4,-73.9202 L-145.314,-68.3132 L-144.098,-62.7211 L-142.755,-57.1468 L-141.288,-51.5934 L-139.701,-46.0634 L-137.996,-40.5595 L-136.177,-35.084 L-134.248,-29.6391 L-132.21,-24.2271 L-130.067,-18.8499 L-127.82,-13.5094 L-125.474,-8.20755 L-123.029,-2.94595 L-120.489,2.27369 L-117.856,7.44977 L-115.131,12.5808 L-112.318,17.6652 L-109.416,22.7016 L-106.43,27.6885 L-103.359,32.6246 L-100.206,37.5086 L-96.9733,42.3389 L-93.6612,47.1144 L-90.2716,51.8335 L-86.8059,56.4951 L-83.2655,61.0976 L-79.6516,65.6398 L-75.9655,70.1201 L-72.2083,74.5371 L-68.3813,78.8893 L-64.4855,83.1752 L-60.5222,87.3932 L-56.4922,91.5416 L-52.3968,95.6188 L-48.2369,99.623 L-44.0137,103.552 L-39.728,107.405 L-35.3811,111.178 L-30.9738,114.871 L-26.5074,118.481 L-21.9829,122.005 L-17.4014,125.442 L-12.7641,128.788 L-8.07217,132.041 L-3.32695,135.199 L1.47027,138.259 L6.31809,141.217 L11.215,144.07 L16.1595,146.816 L21.1499,149.45 L26.1843,151.97 L31.261,154.371 L36.3778,156.65 L41.5326,158.803 L46.723,160.825 L51.9466,162.713 L57.2007,164.461 L62.4823,166.065 L67.7885,167.52 L73.1158,168.822 L78.4608,169.964 L83.8195,170.943 L89.1881,171.751 L94.562,172.384 L99.9365,172.836 L105.307,173.101 L110.667,173.173 L116.013,173.045 L121.337,172.712 L126.633,172.167 L131.895,171.404 L137.114,170.416 L142.285,169.197 L147.397,167.741 L152.443,166.04 L157.415,164.089 L162.301,161.881 L167.093,159.411 L171.78,156.672 L176.351,153.659 L180.794,150.368 L185.099,146.791 L189.253,142.927 L193.243,138.77 L197.056,134.317 L200.679,129.565 L204.099,124.514 L207.302,119.16 L210.273,113.505 L212.999,107.548 L215.466,101.292 L217.659,94.7393 L219.564,87.8943 L221.167,80.7623 L222.456,73.3502 L223.416,65.666"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+<image x="736" y="514" width="45" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAANCAYAAAA9tuesAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAA59JREFUSIntlVtoHFUYx3/fmd3ZpNuYEFpTmzYbrSJVCSoUwtLZNdVAfaiCuqgoCvVeRMRHKSmVVipSLw8WlVYRpK/SKlgJJs7MWij08lZprUoo2AsG0botO5M5nw85W6bBBwVFBP8v3+V8lz//OcyB//EvoV6v91Wr1eWNRsP/q73j4+NlQP4BWlcgv0BqtdorwK253AdRFH3yZwYFQbANGAH2x3G8++/iFwTBJqAK9Kjqa81m8+vLpGu12gSwBkBVj4vITQDW2h2e5x0KwzADdMuWLQZg69atWq/XvWKxWE6S5GrgDTdqIoqiY+vWrRsAmJqaOtfZUa1We4wxS7u7u89NTk62ABqNhn/+/Pn+NE1bBw8evLBAiB0icnM+Z63dJrmCd0RkSFXfjON4OgiCe4AnjDG7rLXPAZ/HcfxuEAR7gKWqutcY80heFUBFZJ+19m4R8XOLHvM8b0BVX8/Vv6yqPwFvAd0iItba95rN5mc5lfeJiPi+/2iSJE8Cd6jql4XckG+BIeDFIAieF5E28GGapj8UCoVUVVcAiMiieSPXLfiU6giuyBEWQI0xG621dREBOA2sBF51McAZ4BpjzDNr16492Ww2T7q+l7Is602S5ONOoTGmaXLBbmASuAQUgMXARs/zbuEPICKqqomIbE+S5HEgA2ayLNsJoKp23qgFPCBV1RNRFG2y1u4Bfs6NW9xxPM8b6fhhGJ7q6uo6ld9rrV1lcsFeYDyO4wfL5XIDiB25sQ5JR2bRAuKty1KrSqFQ2OXOTK5vBCiKyCVH7KyqpnkNgJbjcQhg/fr1pSAI9idJ8nYURRuACTfvLq/TNTw8fCewuFKprE7TtBu4zx31OeWXVSqVNSKyxDWfBpaLyFdZll3wPO9e4IKIlAEf+BS4ETBAl8zfhWVDQ0M+8Kyr6+AjYBTAGHN4Zmbmx97eXuP7/kPAokqlIsALrvbsZaVFZLNzbwOedv5vAwMD9wOzLr4hp+qsqhbn5uZ+7enpaauqMH+13nclG3KkUNUv3J4HnN0J7HLHTzl7LAzDwwBHjhxJRWS7yz/sZlwslUqbr3gI6vV6wVp7uzHmKlU9JyLfhGE4B8jY2NhIlmV+qVQ63mq1zODg4MXZ2dklnV/a6Ohof19fX+vAgQPtarW6yvO8SrFYPNFutz3f94vT09Pf1Wq11dbafhH5Po7jM27n9aq6UlV/ieP4KAsQBMG1xpiKtfaiMeao4/Pfw+/yhHzqDB3POwAAAABJRU5ErkJggg==" />
+<image x="736" y="514" width="45" height="13" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAANCAYAAAA9tuesAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAjJJREFUSIntlE2Ij1EUxn/HDDOMr5lMGLIQJbFgEklpZoGUFLEQipUUIpYWVhYWPsqChSxslGQjGs1qko+RLKZRU5MsLAjDICPGz2Luq+vt/S9Gls7mPPc5zzn3ee+9vZBCnaMuUZsYZ6gtaoy3769DrVPv+WecGEd/d+o59w89TVAvqW/T7J1lwe3MbE+Gd6gNxQmq9epENRI/W12d6Tck3UJ1YWmPVrVdbcm4JnWx2lphOvdRxNZc0J/IvekLj6b1gZQvJt3LtD5ZMVD1rPq1xM1V15a4TnWROpxxh0qnXESrei3hq7npq5loRH2vHnfsFL+o3Un3Pmlu1jB9t4K7luH+ivpAhtdknlapm0vazUV9AnAMuAJ8AhqAZuAMsL7Gk/sJfAO2A/OAH0AfsCvVf2S6emAEeBQRS4HjwOtsVkuGOwsQEb3Ak9K+K3PT74D9ETEdmApcT7U9KY+mPCMbMAoMlYY+T7k+03QAjcBw4gbTR1j4y+bcAlCnqQJPIyKATam+7/dO6ot0/F3q4RpX/zjDNxx7Nh1qm/pd7VOHUv18jRmnK7gjGd6S/EzOuFMZ7s1NL6oYNqROUV9V1C6kvExtTvihuqeG2cul9W71YInryq9M3VaqD6szi3rxO2sENgKzgBfA/Yj4ptYx9tYmAz3AxHSdCyJiMPXOBz5ExGe1HVgOPAAmAY0R0auuA9qAZxExkPpWAUuBNxFxp/TUUFcAy4CPQFdEjJQ1/+N/VMQviWZfYvkH7JMAAAAASUVORK5CYII=" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family=".Helvetica Neue DeskInterface" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+</svg>

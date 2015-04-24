@@ -31,6 +31,7 @@
 		86B56E23D787A5F24641398F /* LinkFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 370DA13018950E5BFF8CF171 /* LinkFilter.cpp */; };
 		879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */; };
 		882FAC4D1ACF3BFF00403F89 /* PulseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */; };
+		8831AF2E1AE8C24300B71739 /* ChaoticUnison.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8831AF2C1AE8C24300B71739 /* ChaoticUnison.cpp */; };
 		885456071ACA598400BB1D27 /* LightingShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456011ACA598400BB1D27 /* LightingShader.cpp */; };
 		885456081ACA598400BB1D27 /* LightingShader_sources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456021ACA598400BB1D27 /* LightingShader_sources.cpp */; };
 		885456091ACA598400BB1D27 /* ofxShadersFX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 885456031ACA598400BB1D27 /* ofxShadersFX.cpp */; };
@@ -310,6 +311,8 @@
 		85B399C99F9879F6C78EDE1B /* snappy-stubs-public.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-stubs-public.h"; path = "../../../addons/ofxIO/libs/snappy/src/snappy-stubs-public.h"; sourceTree = SOURCE_ROOT; };
 		882FAC4B1ACF3BFF00403F89 /* PulseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PulseScene.cpp; path = scenes/PulseScene.cpp; sourceTree = "<group>"; };
 		882FAC4C1ACF3BFF00403F89 /* PulseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PulseScene.h; path = scenes/PulseScene.h; sourceTree = "<group>"; };
+		8831AF2C1AE8C24300B71739 /* ChaoticUnison.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChaoticUnison.cpp; path = scenes/ChaoticUnison.cpp; sourceTree = "<group>"; };
+		8831AF2D1AE8C24300B71739 /* ChaoticUnison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChaoticUnison.h; path = scenes/ChaoticUnison.h; sourceTree = "<group>"; };
 		885456011ACA598400BB1D27 /* LightingShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightingShader.cpp; sourceTree = "<group>"; };
 		885456021ACA598400BB1D27 /* LightingShader_sources.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightingShader_sources.cpp; sourceTree = "<group>"; };
 		885456031ACA598400BB1D27 /* ofxShadersFX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxShadersFX.cpp; sourceTree = "<group>"; };
@@ -1462,6 +1465,8 @@
 			isa = PBXGroup;
 			children = (
 				888680F319E6171F00A9FB4B /* Scenes.h */,
+				8831AF2C1AE8C24300B71739 /* ChaoticUnison.cpp */,
+				8831AF2D1AE8C24300B71739 /* ChaoticUnison.h */,
 				8870D19A1AE239A700A23484 /* FlickerScreen.cpp */,
 				8870D19B1AE239A700A23484 /* FlickerScreen.h */,
 				88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */,
@@ -2013,6 +2018,7 @@
 				8864048B19E4671B00408336 /* ofxFieldEffectorBehavior.cpp in Sources */,
 				8864051C19E4672100408336 /* ofxUISlider.cpp in Sources */,
 				8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */,
+				8831AF2E1AE8C24300B71739 /* ChaoticUnison.cpp in Sources */,
 				8864051219E4672100408336 /* ofxUIMinimalSlider.cpp in Sources */,
 				8864050719E4672100408336 /* ofxUIEventArgs.cpp in Sources */,
 				8864048819E4671B00408336 /* ofxElectroStaticNeighborBehavior.cpp in Sources */,

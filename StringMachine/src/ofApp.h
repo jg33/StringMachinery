@@ -9,22 +9,20 @@
 
 #define NUM_MICS 4
 
-//class CircleScene;
 class ConnectorScene;
 //class RiceScene;
 class FragmentScene;
 class LineChaseScene;
 class VennScene;
-//class NoteSendScene;
 class SingleStringScene;
 class WaveScene;
 class ParticleScene;
 class PulseScene;
 class RingScene;
 class FlickerScreen;
-//class WaveFormScene;
 class BigDrums;
 class WavesOfGrain;
+class ChaoticUnison;
 
 class ofApp : public ofxApp{
 
@@ -70,6 +68,7 @@ private:
     //WaveFormScene * waveform;
     BigDrums * bigDrums;
     WavesOfGrain * grain;
+    ChaoticUnison * chaos;
     
     vector<float> micInputs;
     map<int,ofVec3f> dancers;

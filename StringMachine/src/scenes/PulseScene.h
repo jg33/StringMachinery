@@ -27,12 +27,15 @@ public:
     void draw();
     
     inline void setMaxBrightness(float _brightness){maxBrightness = _brightness;
+        
+        maxBrightness = ofMap(maxBrightness, 0.001, 1, 0, 255);
         for(int i=0;i<fragments.size();i++){
-            fragments[i].setMaxBrightness(_brightness);
+            fragments[i].setMaxBrightness(maxBrightness);
         }
     };
     
     inline void setSpeed(float speed){
+        speed = ofMap(speed, 0.001, 1, 0.1,3);
         for(int i=0;i<fragments.size();i++){
             fragments[i].setPulseSpeed(speed);
         }
