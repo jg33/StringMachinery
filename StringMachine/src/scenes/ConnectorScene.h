@@ -19,7 +19,7 @@
 
 class Connection{
 public:
-    Connection(){size = ofRandom(1,3) ; };
+    Connection(){size = ofRandom(1,3) ;  life=ofRandom(250,750);};
     
     int targetIndex;
     ofVec3f start, current, end;
@@ -53,6 +53,12 @@ public:
         }
         drawnLine = baseLine;
         
+        if(age>life){
+            willDie = true;
+            
+        } else {
+            age++;
+        }
         
         /*
         drawnLine.clear();
@@ -83,7 +89,7 @@ public:
         ofPushStyle();
         //float width = ofMap(dist,0,maxDist,maxWidth,0);
         ofSetLineWidth(size);
-        
+        ofSetColor( ofMap(age,0,life,255,0) );
         /*
         if(isCached){
             cache.draw(0,0);
@@ -100,10 +106,19 @@ public:
         ofPopStyle();
     };
     
+    
+    bool willDie;
+    
 private:
     float reach;
     
     float randSpread = ofRandom(1,5);
+    
+    //int toDie;
+
+    
+    float age, life;
+    
     
 };
 

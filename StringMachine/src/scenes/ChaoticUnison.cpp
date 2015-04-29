@@ -16,7 +16,7 @@ void ChaoticUnison::setup(){
     
     bands.clear();
     for(int i = 1; i< NUM_BANDS+1;i++){
-        bands.push_back(Band(i*150));
+        bands.push_back(Band(i*50));
         
     }
     
@@ -35,7 +35,8 @@ void ChaoticUnison::update(){
 void ChaoticUnison::draw(){
     
     ofBackground(0);
-    
+    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+
     for(int i = 0; i< bands.size();i++){
         bands[i].draw();
         

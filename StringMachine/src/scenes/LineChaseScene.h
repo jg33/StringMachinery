@@ -52,6 +52,17 @@ public:
     void fireRandom();
     void fireRandom(float size);
     
+    void clearLines(){
+        lines.clear();
+        
+    }
+    
+    void startLines(){
+        for (int i = 0; i<NUM_LINES; i++) {
+            lines.push_back(LineChaser(400+ (i*50) ));
+        }
+    }
+    
 private:
     ofxSyphonServer * syphon1, *syphon2;
     ofFbo drawer;

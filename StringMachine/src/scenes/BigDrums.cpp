@@ -88,9 +88,9 @@ void BigDrums::draw(){
         fragments[i].draw();
         
     }
-    syphon1->publishScreen();
-    syphon2->publishTexture(&drawer1.getTexture());
-    syphon3->publishTexture(&drawer2.getTexture());
+    syphon1->publishScreen(); //FRAGMENTS
+    syphon2->publishTexture(&drawer1.getTexture()); //CIRCLES
+    syphon3->publishTexture(&drawer2.getTexture()); //RINGS
 
     
 }

@@ -24,7 +24,7 @@ void ofApp::setup(){
     //noteSend = (NoteSendScene*)sceneManager.add(new NoteSendScene(&syphon1));
     single = (SingleStringScene*)sceneManager.add(new SingleStringScene(&syphon1));
     //waves = (WaveScene*)sceneManager.add(new WaveScene(&syphon1));
-    sceneManager.add(new BoidScene(&syphon1));
+    //sceneManager.add(new BoidScene(&syphon1));
     //sceneManager.add(new AmoebaScene(&syphon1));
     pulse = (PulseScene*) sceneManager.add(new PulseScene(&syphon1));
     //rings = (RingScene*) sceneManager.add(new RingScene(&syphon1));
@@ -88,7 +88,9 @@ void ofApp::update(){
     while (oscIn.hasWaitingMessages()){
         oscIn.getNextMessage(&msg);
         vector<string> address = ofSplitString(msg.getAddress(),"/");
-
+        
+        //cout<< address[1]<<" " <<msg.getArgAsFloat(0)<<endl;
+        
         if(address[1] == "lineWiggle"){
             //micInputs[ofToInt(address[2])]= msg.getArgAsFloat(0);
             lineChase->setLineDisp(ofToInt(address[2]), msg.getArgAsFloat(0));
@@ -99,7 +101,17 @@ void ofApp::update(){
             lineChase->setSpeed(speed);
             lineChase->setHome(home);
 
-        }else if (address[1] == "fragmentBonk"){
+        } else if(address[1] == "lines" && address[2] == "start"){
+            lineChase->startLines();
+
+        } else if(address[1] == "lines" && address[2] == "clear"){
+            
+            lineChase->clearLines();
+            
+        }
+        
+        
+        else if (address[1] == "fragmentBonk"){
             fragments->fireRandom( msg.getArgAsFloat(0));
             bigDrums->fireRandom( msg.getArgAsFloat(0));
             
@@ -123,6 +135,9 @@ void ofApp::update(){
             venn->setSize(ofToInt(address[2]), msg.getArgAsFloat(0)) ;
             
             
+        } else if (address[1] == "venn" && address[3] == "rotation"){
+            venn->setRotationSpeed(msg.getArgAsFloat(0));
+        
         } else if (address[1] == "drum" && address[3] == "amp"){
             bigDrums->setSize(ofToInt(address[2]), msg.getArgAsFloat(0) );
         } else if (address[1] == "drum" && address[3] == "bonk"){
@@ -205,13 +220,23 @@ void ofApp::update(){
 
                     break;
                     
+                case 8:
+                    sceneManager.gotoScene("Chaotic Unison");
                 default:
                     break;
             }
             
             
             
-        } else if (address[1] == "wind"){
+        } else if (address[1] =="nextScene"){
+            sceneManager.nextScene();
+            
+        }else if (address[1] =="prevScene"){
+            sceneManager.prevScene();
+            
+        }
+        
+        else if (address[1] == "wind"){
             rice->setWind(ofVec3f(msg.getArgAsFloat(0), msg.getArgAsFloat(1)));
             
         }

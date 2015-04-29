@@ -168,6 +168,8 @@
 		88A8559E19ED8FA0005AF18C /* Rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559C19ED8FA0005AF18C /* Rice.cpp */; };
 		88A855A119ED9184005AF18C /* RiceScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A8559F19ED9184005AF18C /* RiceScene.cpp */; };
 		88C372FD19EC5CDF00FBDED8 /* ConnectorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */; };
+		88E6F10F1AEEA468003CCCC5 /* ofxLeapMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E6F0F71AEEA468003CCCC5 /* ofxLeapMotion.cpp */; };
+		88E6F1101AEEA468003CCCC5 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E6F1031AEEA468003CCCC5 /* libLeap.dylib */; };
 		88E76B111A13403A0090E1F6 /* LineChaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */; };
 		88E76B141A13418D0090E1F6 /* LineChaser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B121A13418D0090E1F6 /* LineChaser.cpp */; };
 		88E76B3C1A134F3F0090E1F6 /* VennScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88E76B3A1A134F3F0090E1F6 /* VennScene.cpp */; };
@@ -625,6 +627,13 @@
 		88A855A019ED9184005AF18C /* RiceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiceScene.h; sourceTree = "<group>"; };
 		88C372FB19EC5CDF00FBDED8 /* ConnectorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnectorScene.cpp; path = scenes/ConnectorScene.cpp; sourceTree = "<group>"; };
 		88C372FC19EC5CDF00FBDED8 /* ConnectorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectorScene.h; path = scenes/ConnectorScene.h; sourceTree = "<group>"; };
+		88E6F0F71AEEA468003CCCC5 /* ofxLeapMotion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLeapMotion.cpp; sourceTree = "<group>"; };
+		88E6F0F81AEEA468003CCCC5 /* ofxLeapMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxLeapMotion.h; sourceTree = "<group>"; };
+		88E6F0FB1AEEA468003CCCC5 /* Leap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Leap.h; sourceTree = "<group>"; };
+		88E6F0FC1AEEA468003CCCC5 /* LeapMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
+		88E6F1031AEEA468003CCCC5 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		88E6F10D1AEEA468003CCCC5 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		88E6F10E1AEEA468003CCCC5 /* version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
 		88E76B0F1A13403A0090E1F6 /* LineChaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineChaseScene.cpp; path = scenes/LineChaseScene.cpp; sourceTree = "<group>"; };
 		88E76B101A13403A0090E1F6 /* LineChaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChaseScene.h; path = scenes/LineChaseScene.h; sourceTree = "<group>"; };
 		88E76B121A13418D0090E1F6 /* LineChaser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineChaser.cpp; path = particles/LineChaser.cpp; sourceTree = "<group>"; };
@@ -724,6 +733,7 @@
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
+				88E6F1101AEEA468003CCCC5 /* libLeap.dylib in Frameworks */,
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
 				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
 				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
@@ -1516,6 +1526,62 @@
 			name = particles;
 			sourceTree = "<group>";
 		};
+		88E6F0F51AEEA468003CCCC5 /* ofxLeapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F0F61AEEA468003CCCC5 /* src */,
+				88E6F0F91AEEA468003CCCC5 /* libs */,
+			);
+			name = ofxLeapMotion;
+			sourceTree = "<group>";
+		};
+		88E6F0F61AEEA468003CCCC5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F0F71AEEA468003CCCC5 /* ofxLeapMotion.cpp */,
+				88E6F0F81AEEA468003CCCC5 /* ofxLeapMotion.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxLeapMotion/src;
+			sourceTree = "<group>";
+		};
+		88E6F0F91AEEA468003CCCC5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F0FA1AEEA468003CCCC5 /* include */,
+				88E6F0FD1AEEA468003CCCC5 /* lib */,
+				88E6F10D1AEEA468003CCCC5 /* README.txt */,
+				88E6F10E1AEEA468003CCCC5 /* version.txt */,
+			);
+			name = libs;
+			path = ../../../addons/ofxLeapMotion/libs;
+			sourceTree = "<group>";
+		};
+		88E6F0FA1AEEA468003CCCC5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F0FB1AEEA468003CCCC5 /* Leap.h */,
+				88E6F0FC1AEEA468003CCCC5 /* LeapMath.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		88E6F0FD1AEEA468003CCCC5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F1021AEEA468003CCCC5 /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		88E6F1021AEEA468003CCCC5 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				88E6F1031AEEA468003CCCC5 /* libLeap.dylib */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
 		8FE15F6815C4A8DE40915EAE /* lz4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1567,6 +1633,7 @@
 				887A96071A81C4AD0023FAC9 /* ofxFlocking */,
 				885455FF1ACA598400BB1D27 /* ofxShadersFX */,
 				885456191ACA64D500BB1D27 /* ofxDelaunay */,
+				88E6F0F51AEEA468003CCCC5 /* ofxLeapMotion */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -1829,7 +1896,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n\n//LEAP\ncp -f ../../../addons/ofxLeapMotion/libs/lib/osx/libLeap.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libLeap.dylib\"; install_name_tool -change ./libLeap.dylib @executable_path/libLeap.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1897,6 +1964,7 @@
 				888268131A0C209400C172FF /* svgtiny_list.cpp in Sources */,
 				8864059819E46CBE00408336 /* guiTypeButtonSlider.cpp in Sources */,
 				93640C223A2F5BEAD6DA2E35 /* Compression.cpp in Sources */,
+				88E6F10F1AEEA468003CCCC5 /* ofxLeapMotion.cpp in Sources */,
 				8864048C19E4671B00408336 /* ofxForceBehavior.cpp in Sources */,
 				8864051519E4672100408336 /* ofxUIMultiImageToggle.cpp in Sources */,
 				8864052919E4672100408336 /* ofxUIWidgetWithLabel.cpp in Sources */,
@@ -2277,9 +2345,10 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					/Users/jesse/Dev/openFrameworks/addons/ofxLeapMotion/libs/lib/osx,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				USER_HEADER_SEARCH_PATHS = ../../../addons/ofxFft/libs/fftw/include/;
+				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxLeapMotion/libs/include/ ../../../addons/ofxFft/libs/fftw/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2364,9 +2433,10 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					/Users/jesse/Dev/openFrameworks/addons/ofxLeapMotion/libs/lib/osx,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = ../../../addons/ofxFft/libs/fftw/include/;
+				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxLeapMotion/libs/include/ ../../../addons/ofxFft/libs/fftw/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

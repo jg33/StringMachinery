@@ -83,7 +83,10 @@ public:
     }
     inline void setDisplace(int i, float amt){circles[i].setDisplace(amt);};
     inline void setWiggle(int i, float amt){circles[i].setWiggle(amt);};
-    inline void setRotationSpeed(float amt){};
+    inline void setRotationSpeed(float amt){
+        rotationSpeed = amt;
+        cout<<"rot +"<<amt<<endl;
+    };
     
 private:
     ofxSyphonServer * syphon;
@@ -97,8 +100,8 @@ private:
     void calcOverlap(VennCircle a, VennCircle b, VennCircle c);
 
     
-    float rotation;
-    float rotationSpeed = 1;
+    float rotato;
+    float rotationSpeed = 0;
     
     vector<ofPoint> getConvexHull(vector<ofPoint> points);
     ofPoint h1,h2,h3;

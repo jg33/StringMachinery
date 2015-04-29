@@ -61,6 +61,9 @@ void LineChaseScene::draw(){
         lines[i].draw();
     }
     
+    //ofSetColor(255);
+    //drawer.draw(0,0);
+    
     syphon1->publishScreen();
     syphon2->publishTexture(&drawer.getTexture());
 }
@@ -74,7 +77,8 @@ void LineChaseScene::setLineDisp(int i, float d){
 
 void LineChaseScene::fire(float freq, float amp){
     int num = floor(ofMap(freq, 0.0001, 1, 0, fragments.size()));
-    amp = ofMap(amp, 1, 0.0001, 0, 255);
+    amp = ofMap(amp, 0.0001,1, 0, 255);
+    cout<<num<<"/"<<fragments.size()<<" "<<amp<<endl;
     fragments[num].fire(amp);
     
 }

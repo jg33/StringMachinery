@@ -22,7 +22,7 @@ public:
     static bool isPointOff(ofVec3f v){
         bool bWillDie = false;
         
-        if(v.x> 1000 || v.x< -1000) {
+        if(v.x> 660 || v.x< -660) {
             
             bWillDie = true;
         }

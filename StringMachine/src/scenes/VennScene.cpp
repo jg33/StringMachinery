@@ -27,7 +27,8 @@ void VennScene::update(){
     right.setDisplace(rightDisplace);
      */
     
-    rotation+= rotationSpeed;
+    rotato+= rotationSpeed;
+    cout<<rotato<<endl;
     
     calcOverlap(circles[0] , circles[1], circles[2]);
     
@@ -39,7 +40,7 @@ void VennScene::draw(){
     if (ofGetLightingEnabled()) ofDisableLighting();
     ofBackground(0);
     ofTranslate(ofGetWidth()/2,ofGetHeight()/2);
-    ofRotate (rotation);
+    ofRotate (rotato);
     
     overlapShape.draw();
 

@@ -13,6 +13,7 @@
 #include "ofxAppUtils.h"
 #include "ofxFlocking.h"
 #include "ofxSyphon.h"
+#include "ofxLeapMotion.h"
 
 class Ribbon: public Boid{
     
@@ -56,9 +57,7 @@ public:
            // theLine.curveTo(previousLocations[i]);
         }
         theLine.simplify(0.3);
-       // theLine.setFilled(false);
-      //  theLine.setStrokeWidth(width);
-      //  theLine.setCurveResolution(10);
+
         
         mesh.clear();
         mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
@@ -167,13 +166,14 @@ public:
     
     void exit();
     
-    int spawnEveryXFrames =1;
+    int spawnEveryXFrames = 1;
     
     inline void setSeparate(float amt){flock.setSeparate(amt);};
     inline void setCohesion(float amt){flock.setCohesion(amt);};
     inline void setAlign(float amt){flock.setAlign(amt);};
     inline void setDrift(float freq, float amt){flock.setDrift(freq, amt);};
 private:
+    
     
     RibbonFlocking flock;
     
@@ -184,6 +184,8 @@ private:
     ofMesh flockMesh;
     ofLight light;
     ofMaterial mat;
+    
+    ofxLeapMotion leap;
 };
 
 

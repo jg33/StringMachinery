@@ -25,6 +25,7 @@ void FlickerScreen::draw(){
     
     ofBackground(brightness);
     ofSetColor(brightness*255);
+    ofFill();
     ofDrawRectangle(0,0,ofGetWidth(),ofGetHeight());
     syphon->publishScreen();
 

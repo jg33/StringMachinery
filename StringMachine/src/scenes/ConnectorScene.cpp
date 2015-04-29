@@ -8,6 +8,10 @@
 
 #include "ConnectorScene.h"
 
+bool killOldConnections(Connection c){
+    return c.willDie;
+}
+
 void ConnectorScene::setup(){
     ofDisableLighting();
     
@@ -78,7 +82,7 @@ void ConnectorScene::update(){
     }
     
     
-    
+    ofRemove(connections, &killOldConnections);
     
     
     
