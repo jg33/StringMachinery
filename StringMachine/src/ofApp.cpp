@@ -33,6 +33,9 @@ void ofApp::setup(){
     bigDrums = (BigDrums*) sceneManager.add(new BigDrums(&syphon1, &syphon2, &syphon3));
     grain = (WavesOfGrain*) sceneManager.add(new WavesOfGrain(&syphon1, &syphon2));
     chaos = (ChaoticUnison*) sceneManager.add(new ChaoticUnison(&syphon1));
+    meshScene = (MeshScene*) sceneManager.add(new MeshScene(&syphon1));
+    
+    
     
     sceneManager.setup(true);
     //ofSetLogLevel("ofxSceneManager", OF_LOG_VERBOSE);
@@ -303,6 +306,10 @@ void ofApp::keyPressed(int key){
             break;
             case 'r':
             bigDrums->bonkRing(ofRandom(30));
+            break;
+            
+            case 'q':
+            meshScene->addLine(ofGetMouseX(), ofGetMouseY(), ofRandom(1,5));
             break;
 
     }

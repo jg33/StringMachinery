@@ -27,5 +27,7 @@
 #include "BigDrums.h"
 #include "WavesOfGrain.h"
 #include "ChaoticUnison.h"
+#include "MeshScene.h"
+
 
 #endif

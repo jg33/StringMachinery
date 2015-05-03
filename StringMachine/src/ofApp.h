@@ -23,6 +23,7 @@ class FlickerScreen;
 class BigDrums;
 class WavesOfGrain;
 class ChaoticUnison;
+class MeshScene;
 
 class ofApp : public ofxApp{
 
@@ -69,6 +70,7 @@ private:
     BigDrums * bigDrums;
     WavesOfGrain * grain;
     ChaoticUnison * chaos;
+    MeshScene * meshScene;
     
     vector<float> micInputs;
     map<int,ofVec3f> dancers;
